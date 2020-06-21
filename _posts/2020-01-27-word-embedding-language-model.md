@@ -8,7 +8,7 @@ categories:
   - Python
   - Data Visualization
 last_modified_at: 2020-06-21T08:06:00-07:00
-comment: true
+comments: true
 ---
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
