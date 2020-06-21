@@ -100,10 +100,10 @@ author:
   email            : "haoyanhy.jiang@mail.utoronto.ca"
   links:
     - label: "Github"
-      icon: "fab fa-github"
+      icon: "fab fa-fw fa-github"
       url: "mailto:haoyanhy.jiang@mail.utoronto.ca"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter"
+      icon: "fab fa-fw fa-twitter style='color: #fff'"
       url: "https://twitter.com/Max15595598"
     - label: "Medium"
       icon: "fab fa-fw fa-medium-m"
