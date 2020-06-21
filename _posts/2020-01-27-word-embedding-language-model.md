@@ -101,16 +101,16 @@ Even though you only have to modify two specific locations in the code, you may 
 
 Now, we will implement a simplified version of the GLoVE embedding with the loss defined as
 
-$L(\{\mathbf{w}_i,b_i\}_{i=1}^V) = \sum_{i,j=1}^V (\mathbf{w}_i^\top\mathbf{w}_j + b_i + b_j - \log X_{ij})^2$.
+$$L(\{\mathbf{w}_i,b_i\}_{i=1}^V) = \sum_{i,j=1}^V (\mathbf{w}_i^\top\mathbf{w}_j + b_i + b_j - \log X_{ij})^2$$.
 
-Note that each word is represented by a d-dimensional vector $\mathbf{w}_i$ and a scalar bias $b_i$.
+Note that each word is represented by a d-dimensional vector $$\mathbf{w}_i$$ and a scalar bias $$b_i$$.
 
 We have provided a few functions for training the embedding:
 
 *   *calculate_log_co_occurence* computes the log co-occurrence matrix of a given corpus
 *   *train_GLoVE* runs momentum gradient descent to optimize the embedding
-*   *loss_GLoVE:* INPUT - $V\times d$ matrix $W$ (collection of $V$ embedding vectors, each d-dimensional); $V\times 1$ vector $\mathbf{b}$ (collection of $V$ bias terms); $V \times V$ log co-occurrence matrix. OUTPUT - loss of the GLoVE objective
-*   *grad_GLoVE:* INPUT - $V\times d$ matrix $W$, $V\times 1$ vector b, and $V\times V$ log co-occurrence matrix. OUTPUT - $V\times d$ matrix grad_W containing the gradient of the loss function w.r.t. $W$; $V\times 1$ vector grad_b which is the gradient of the loss function w.r.t. $\mathbf{b}$. TO BE IMPLEMENTED.
+*   *loss_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$ (collection of $$V$$ embedding vectors, each d-dimensional); $$V\times 1$$ vector $$\mathbf{b}$$ (collection of $$V$$ bias terms); $$V \times V$$ log co-occurrence matrix. OUTPUT - loss of the GLoVE objective
+*   *grad_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$, $$V\times 1$$ vector b, and $$V\times V$$ log co-occurrence matrix. OUTPUT - $$V\times d$$ matrix grad_W containing the gradient of the loss function w.r.t. $$W$$; $$V\times 1$$ vector grad_b which is the gradient of the loss function w.r.t. $$\mathbf{b}$$. TO BE IMPLEMENTED.
 
 Run the code to compute the co-occurence matrix.
 Make sure to add a 1 to the occurences, so there are no 0's in the matrix when we take the elementwise log of the matrix.
@@ -143,7 +143,7 @@ log_co_occurence_train = calculate_log_co_occurence(data['train_inputs'])
 log_co_occurence_valid = calculate_log_co_occurence(data['valid_inputs'])
 ```
 
-calculate the gradient of the loss function w.r.t. the parameters $W$ and $\mathbf{b}$. You should vectorize the computation, i.e. not loop over every word.
+calculate the gradient of the loss function w.r.t. the parameters $$W$$ and $$\mathbf{b}$$. You should vectorize the computation, i.e. not loop over every word.
 
 
 
@@ -224,12 +224,7 @@ pylab.legend()
     No handles with labels found to put in legend.
     <matplotlib.legend.Legend at 0x7f022b629208>
 
-
-
-
-![png](../assets/imgs/posts/language_model_files/language_model_15_2.png)
-
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_15_2.png){: .align-center}
 
 ```ruby
 pylab.loglog(embedding_dims, final_val_losses)
@@ -242,44 +237,43 @@ pylab.legend()
 
     <matplotlib.legend.Legend at 0x7f022b566390>
 
-![png](../assets/imgs/posts/language_model_files/language_model_16_2.png)
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_16_2.png){: .align-center}
 
 Some questions to ask yourself:
 
-1.  Given the vocabulary size $V$ and embedding dimensionality $d$, how many parameters does the GLoVE model have?
+1.  Given the vocabulary size $$V$$ and embedding dimensionality $$d$$, how many parameters does the GLoVE model have?
 
-  > $V\times d + d$
+  > $$V\times d + d$$
   
-2.  Write the gradient of the loss function with respect to one parameter vector $\mathbf{w}_i$.
+2.  Write the gradient of the loss function with respect to one parameter vector $$\mathbf{w}_i$$.
 
- > $\frac{\partial L}{\partial w_i} = 2\sum_{j=1, j\neq i}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$
-$= 4\sum_{j=1}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$
+ > $$\frac{\partial L}{\partial w_i} = 2\sum_{j=1, j\neq i}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$$
+$$= 4\sum_{j=1}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$$
 
-  > $\frac{\partial L}{\partial b_i} = 2\sum_{j=1, j\neq i}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$
-$= 4\sum_{j=1}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$
+  > $$\frac{\partial L}{\partial b_i} = 2\sum_{j=1, j\neq i}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$$
+$$= 4\sum_{j=1}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$$
 
-3.  Train the model with varying dimensionality $d$.
-Which $d$ leads to optimal validation performance?
-Why does / doesn't larger $d$ always lead to better validation error?
+3.  Train the model with varying dimensionality $$d$$.
+Which $$d$$ leads to optimal validation performance?
+Why does / doesn't larger $$d$$ always lead to better validation error?
 
-  > when d = 11, d leads to optimal validation performance with the smallest validation error. This dimentionality indicates a possible encoding of $2^{11} = 2048$ ways. Model may be over fit if dimension is too large, while underfit if dimension is too small.  
+  > when d = 11, d leads to optimal validation performance with the smallest validation error. This dimentionality indicates a possible encoding of $$2^{11} = 2048$$ ways. Model may be over fit if dimension is too large, while underfit if dimension is too small.  
 
 
 # Part 2: Network Architecture
-1. - Word embedding weight: $250\times 16$
+1. - Word embedding weight: $$250\times 16$$
 
-    - Embedded to hidden weight: $3\times16\times 128$
+    - Embedded to hidden weight: $$3\times16\times 128$$
 
-    - Hidden to output weight: $128\times 250$
+    - Hidden to output weight: $$128\times 250$$
 
-    - Hidden bias: $128\times 1$
+    - Hidden bias: $$128\times 1$$
 
-    - Output bias: $250\times1$
+    - Output bias: $$250\times1$$
 
     - Total: 42522 parameters. The hidden to output weight has the most parameters
 
-2. A 4-grams model is a model predict the 4th word from 3 previous words. That is, we have 250 vocabularies in total, there is a combination of $250^4 = 3906250000$ possible non-repeated outcomes. 
+2. A 4-grams model is a model predict the 4th word from 3 previous words. That is, we have 250 vocabularies in total, there is a combination of $$250^4 = 3906250000$$ possible non-repeated outcomes. 
 
 # Part 3: Training the model
 
@@ -1624,10 +1618,7 @@ tsne_plot_representation(trained_model)
     Iteration  990 : error is  0.6337973244539044
     Iteration  1000 : error is  0.6337973197804718
 
-
-
-![png](../assets/imgs/posts/language_model_files/language_model_37_1.png)
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_37_1.png){: .align-center}
 
 
 ```ruby
@@ -1745,18 +1736,14 @@ tsne_plot_GLoVE_representation(W_final, b_final)
     Iteration  1000 : error is  1.1293001798713274
 
 
-
-![png](../assets/imgs/posts/language_model_files/language_model_38_3.png)
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_38_3.png){: .align-center}
 
 
 ```ruby
 plot_2d_GLoVE_representation(W_final_2d, b_final_2d)
 ```
 
-
-![png](../assets/imgs/posts/language_model_files/language_model_39_0.png)
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_39_0.png){: .align-center}
 
 
 ```ruby
@@ -1868,10 +1855,7 @@ tsne_plot_GLoVE_representation(W_final_2d, b_final_2d)
     Iteration  990 : error is  0.3044384217150869
     Iteration  1000 : error is  0.3044383911881474
 
-
-
-![png](../assets/imgs/posts/language_model_files/language_model_40_1.png)
-
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_40_1.png){: .align-center}
 
 3. As we can see, "new" and "york" are not close together, which is also as expected, because if two words close together, this means that the similarity between two words are very large. While "new" and "york" have very different meanings and nature in language, and should not be categorized into the same group.
 
