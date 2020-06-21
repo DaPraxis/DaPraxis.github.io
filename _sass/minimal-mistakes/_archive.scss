@@ -62,6 +62,18 @@
   a + a {
     opacity: 0.5;
   }
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a::before{
+    width: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: red;
+  }
 }
 
 /* remove border*/
