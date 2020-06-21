@@ -39,10 +39,24 @@ toc: true
 	<figcaption>Photo by Author, My partner in Montreal, 2019 Aug</figcaption>
 </figure>
 
+{% capture fig_img %}
+[![image-center](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)
+{% endcapture %}
+
+{% capture fig_caption %}
+Image with a caption.
+{% endcapture %}
+
+
 <figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+</figure>
+
+<!-- <figure>
 	<a href="https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif"><img src="https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif"></a>
 	<figcaption>Animated</figcaption>
-</figure>
+</figure> -->
 
 ----
 
