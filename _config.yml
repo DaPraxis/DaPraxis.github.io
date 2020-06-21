@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "EyeDK"
+title                    : "MJ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Max Jiang"
@@ -102,24 +102,15 @@ author:
     - label: "Github"
       icon: "fab fa-github"
       url: "mailto:haoyanhy.jiang@mail.utoronto.ca"
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   url: "https://dapraxis.github.io/"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter"
       url: "https://twitter.com/Max15595598"
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "Medium"
-      icon: "fab fa-medium-m"
+      icon: "fab fa-fw fa-medium-m"
       url: "https://medium.com/@haoyanjiang0709"
     - label: 'LinkedIn'
-      icon: 'fab fa-linkedin'
+      icon: 'fab fa-fw fa-linkedin-in'
       url: 'https://www.linkedin.com/in/haoyan-jiang/'
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -127,24 +118,13 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: 'https://twitter.com/Max15595598'
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://medium.com/@haoyanjiang0709"
     - label: 'LinkedIn'
-      icon: 'fab fa-linkedin'
+      icon: 'fab fa-fw fa-linkedin'
       url: 'https://www.linkedin.com/in/haoyan-jiang/'
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-      # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
-      # url:
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-      # url:
+
 
 
 # Reading Files
