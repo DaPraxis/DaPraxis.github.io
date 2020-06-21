@@ -13,7 +13,7 @@ Future direct Ph.D. in the University of Toronto under the supervision of Profes
 Focusing on developing software to research in public health and medical industry, and provide data insight using Transfer Learning and Data Science models.
 
 ## Experiences
-#### Data Science Team Lead
+### Data Science Team Lead
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 05/2020 - present
 
@@ -25,12 +25,12 @@ Using Cluster Boosted Multitask Learning algorithm to acquire high precision dat
 
 Interactive Machine Learning projects automate data processing and model learning, responsive on web platforms with scientific visualizations
 
-#### Machine Learning Researcher
+### Machine Learning Researcher
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 03/2020 - present
 
 Working in multiple projects at the same time: NIH challenges, fMRI image prediction, Braintagger Centivizer system and Long-Short Term Memory Model in Time Series
-#### Software Engineer & 3D Modeling
+### Software Engineer & 3D Modeling
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 05/2019 - 09/2019
 
