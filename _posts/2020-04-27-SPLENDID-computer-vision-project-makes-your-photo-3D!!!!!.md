@@ -29,9 +29,18 @@ toc: true
 	<figcaption>Photo by Author, Yoho National Park in Banff, 2018 Nov</figcaption>
 </figure>
 
+{% capture fig_img %}
+[![image-center](https://miro.medium.com/max/960/1*wKuUmoXjE4cD9znfrSbQuA.gif)](https://miro.medium.com/max/960/1*wKuUmoXjE4cD9znfrSbQuA.gif){: .align-center}
+{% endcapture %}
+
+{% capture fig_caption %}
+Animated to 3D 
+{% endcapture %}
+
+
 <figure>
-	<a href="https://miro.medium.com/max/1400/1*TEugkgXWy4uZpgfzpaIebQ.jpeg"><img src="https://miro.medium.com/max/960/1*wKuUmoXjE4cD9znfrSbQuA.gif"></a>
-	<figcaption>Animated</figcaption>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
 <figure>
@@ -44,7 +53,7 @@ toc: true
 {% endcapture %}
 
 {% capture fig_caption %}
-Animated
+Animated to 3D 
 {% endcapture %}
 
 
@@ -52,11 +61,6 @@ Animated
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
-
-<!-- <figure>
-	<a href="https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif"><img src="https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif"></a>
-	<figcaption>Animated</figcaption>
-</figure> -->
 
 ----
 
