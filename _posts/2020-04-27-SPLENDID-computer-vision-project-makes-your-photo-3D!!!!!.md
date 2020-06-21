@@ -21,7 +21,8 @@ toc: true
 
 <figure>
 	<a href="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"><img src="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"></a>
-	<figcaption>Animated</figcaption>
+	<br/>
+	<figcaption>Animated to 3D</figcaption>
 </figure>
 
 <figure>
@@ -40,6 +41,7 @@ Animated to 3D
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <br/>
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
@@ -59,6 +61,7 @@ Animated to 3D
 
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <br/>
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
