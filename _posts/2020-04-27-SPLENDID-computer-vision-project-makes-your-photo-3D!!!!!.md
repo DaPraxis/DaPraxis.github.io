@@ -19,11 +19,14 @@ toc: true
 	<figcaption>Photo by Author, on the road to Banff, 2018 Nov</figcaption>
 </figure>
 
+{% capture fig_img %}
+[![image-center](https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif)](https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif){: .align-center}
+{% endcapture %}
+
 <figure>
-	<a href="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"><img src="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"></a>
-	<br/>
-	<figcaption>Animated to 3D</figcaption>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
+
 
 <figure>
 	<a href="https://miro.medium.com/max/1400/1*TEugkgXWy4uZpgfzpaIebQ.jpeg"><img src="https://miro.medium.com/max/1400/1*TEugkgXWy4uZpgfzpaIebQ.jpeg"></a>
@@ -34,15 +37,8 @@ toc: true
 [![image-center](https://miro.medium.com/max/960/1*wKuUmoXjE4cD9znfrSbQuA.gif)](https://miro.medium.com/max/960/1*wKuUmoXjE4cD9znfrSbQuA.gif){: .align-center}
 {% endcapture %}
 
-{% capture fig_caption %}
-Animated to 3D 
-{% endcapture %}
-
-
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <br/>
-  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
 <figure>
@@ -54,15 +50,8 @@ Animated to 3D
 [![image-center](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif){: .align-center}
 {% endcapture %}
 
-{% capture fig_caption %}
-Animated to 3D 
-{% endcapture %}
-
-
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <br/>
-  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
 ----
