@@ -40,11 +40,11 @@ toc: true
 </figure>
 
 {% capture fig_img %}
-[![image-center](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)
+[![image-center](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif)](https://miro.medium.com/max/640/1*M0HrxIT2L1pZcZ6px47rAg.gif){: .align-center}
 {% endcapture %}
 
 {% capture fig_caption %}
-Image with a caption.
+Animated
 {% endcapture %}
 
 
