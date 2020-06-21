@@ -99,8 +99,8 @@ author:
   location         : "Toronto ON CA"
   email            : "haoyanhy.jiang@mail.utoronto.ca"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+    - label: "Github"
+      icon: "fab fa-github"
       url: "mailto:haoyanhy.jiang@mail.utoronto.ca"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
@@ -111,7 +111,7 @@ author:
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
+    - label: "Medium"
       icon: "fab fa-medium-m"
       url: "https://medium.com/@haoyanjiang0709"
     - label: 'LinkedIn'
@@ -282,10 +282,10 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
-      
+
   # _pages
   - scope:
       path: ""
@@ -293,3 +293,5 @@ defaults:
     values:
       layout: single
       author_profile: true
+      share: true
+      related: true
