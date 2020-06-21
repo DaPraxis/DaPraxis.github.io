@@ -9,6 +9,7 @@ categories:
   - Data Visualization
 last_modified_at: 2020-06-21T08:06:00-07:00
 comments: true
+mathjax: true
 ---
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
@@ -110,7 +111,7 @@ We have provided a few functions for training the embedding:
 *   *calculate_log_co_occurence* computes the log co-occurrence matrix of a given corpus
 *   *train_GLoVE* runs momentum gradient descent to optimize the embedding
 *   *loss_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$ (collection of $$V$$ embedding vectors, each d-dimensional); $$V\times 1$$ vector $$\mathbf{b}$$ (collection of $$V$$ bias terms); $$V \times V$$ log co-occurrence matrix. OUTPUT - loss of the GLoVE objective
-*   *grad_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$, $$V\times 1$$ vector b, and $$V\times V$$ log co-occurrence matrix. OUTPUT - $$V\times d$$ matrix grad_W containing the gradient of the loss function w.r.t. $$W$$; $$V\times 1$$ vector grad_b which is the gradient of the loss function w.r.t. $$\mathbf{b}$$. TO BE IMPLEMENTED.
+*   *grad_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$, $$V\times 1$$ vector b, and $$V\times V$$ log co-occurrence matrix. OUTPUT - $$V\times d$$ matrix grad_W containing the gradient of the loss function w.r.t. $$W$$; $$V\times 1$$ vector grad_b which is the gradient of the loss function w.r.t. $$\mathbf{b}$$.
 
 Run the code to compute the co-occurence matrix.
 Make sure to add a 1 to the occurences, so there are no 0's in the matrix when we take the elementwise log of the matrix.
