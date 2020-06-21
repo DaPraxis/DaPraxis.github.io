@@ -8,6 +8,7 @@ categories:
   - Data Science
 last_modified_at: 2020-06-21T08:06:00-05:00
 comments: true
+toc: true
 ---
 
 **In** real life, data preprocessing is really a pain for most data scientists. But with the help of data visualization libraries, it actually can be fun to play with.
