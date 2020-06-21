@@ -1,6 +1,7 @@
 ---
 title:  "3 Python Visualization Libraries You MUST Know as A Data Scientist"
 search: false
+excerpt: 'Python Visualization packages for Data Scientists'
 categories: 
   - Python
   - Data Visualization
@@ -27,7 +28,7 @@ As the title suggests, we are gonna quickly CODE through the three most exciting
 ## Env Setup:
 We are taking advantage of the power of Pandas and Numpy. If you do not have those tools in your hand, simply click the link above and follow those instructions. I personally recommend installing using Anaconda for both dependencies, type following commands in Anaconda Prompt and you are done!
 
-```py
+```yaml
 conda install -c anaconda pandas
 conda install -c anaconda numpy
 ```
@@ -35,17 +36,17 @@ Then, set up for our five visualization libraries:
 
 *Matplotlib:*
 
-```py
+```yaml
 conda install -c conda-forge matplotlib 
 ```
 
 *Seaborn:*
-```py
+```yaml
 conda install -c anaconda seaborn
 ```
 
 *Missingno:*
-```py
+```yaml
 conda install -c conda-forge missingno
 ```
 
@@ -55,7 +56,7 @@ Now, you are all set!
 
 I am using the data from [Kaggle](https://github.com/Kaggle/kaggle-api) open dataset, and setup in Colab. I won’t bore you with the detail about the API calls and setup stuff, if you need help, you can DM me and I can walk you through it! Theses [docs](https://github.com/Kaggle/kaggle-api/issues/15) may help if you really want to work in the Colab, and I am sharing my workspace [**here**](https://colab.research.google.com/drive/1qdaZwJLP14-vhImVjMNiYFZTqXJ9Qo04) as well.
 
-```py
+```yaml
 # !pip install kaggle
 %mkdir -p /content/playground/data/
 %cd /content/playground/data/
@@ -66,7 +67,7 @@ I am using the data from [Kaggle](https://github.com/Kaggle/kaggle-api) open dat
 
 This script is used in Colab, make a workspace on your local env, fetch data from Kaggle, then install missingno. The data we are using is Kaggle “Housing Prices Competition for Kaggle Learn Users”, which is a well documented open-source dataset.
 
-```py
+```ruby
 import numpy as np
 import pandas as pd
 import missingno as msno
@@ -89,7 +90,7 @@ Now, we import all dependencies, read the data, and glimpse at the first few lin
 
 Then, we only use a subset of the whole dataset for the purpose of demonstration
 
-```py
+```ruby
 col_sel = ["Alley", "Street", "LotArea", "LotFrontage", "Utilities", "LandSlope", "Neighborhood", "YearBuilt", "YearRemodAdd"]
 subTrain = train[col_sel]
 subTrain.head()
@@ -110,7 +111,7 @@ As we mentioned above, Matplotlib is a low-level plot tool that supports all plo
 1. [Heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html?highlight=heat#seaborn.heatmap)
 
 We normally using heatmap for correlation plot between features, while it can also be used to plot the relationship between any three features in 3D contour plot(at least one have to be number field)
-```py
+```ruby
 f,ax = plt.subplots(figsize=(8,8))
 sns.heatmap(subTrain.corr(),annot=True, fmt=".2f",ax=ax)
 ```
@@ -125,7 +126,7 @@ Only data with `dtype!=string` will have a correlation calculated. We see a high
 
 `pairplot` is also a very handy tool for data summary. You can not only see the pairwise relation between features but also univariate plot, probability mass plot, etc.
 
-```py
+```ruby
 g = sns.pairplot(subTrain)
 g2 = sns.pairplot(subTrain, hue="LandSlope")
 ```
@@ -142,7 +143,7 @@ g2 = sns.pairplot(subTrain, hue="LandSlope")
 
 3. [Violin Plot](https://seaborn.pydata.org/generated/seaborn.violinplot.html?highlight=vio#seaborn.violinplot)
 `violinplot` is generally used for distribution visualization and distribution comparison. For features differs in another feature with only two unique entries, we use `split=True` to compare between them
-```py
+```ruby
 scale = 1.5
 plt.figure(figsize=(len(col_sel)*scale, len(col_sel)*scale))
 sns.violinplot(x="LandSlope", y="LotArea", hue="Street", split=True, palette="Set2",data=subTrain, inner="stick",scale="count")
@@ -161,7 +162,7 @@ Missingno is a small but fancy library for data visualization. It has regular ch
 
 In Medical Science data, there will frequently have a lot of null data, the missingno come in very straightforward in null space representation, cannot be more recommended!
 
-```py
+```ruby
 %matplotlib inline
 msno.matrix(subTrain, figsize=(15, 15), color=(0.24, 0.77, 0.77))
 ```
