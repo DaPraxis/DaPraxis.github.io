@@ -21,7 +21,12 @@ toc: true
 
 <figure>
 	<a href="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"><img src="https://miro.medium.com/max/960/1*Inzb63-wcDzxmqYTgb2vWg.gif"></a>
-	<figcaption>Photo by Auther, Yoho National Park in Banff, 2018 Nov</figcaption>
+	<figcaption>Animated</figcaption>
+</figure>
+
+<figure>
+	<a href="https://miro.medium.com/max/1400/1*TEugkgXWy4uZpgfzpaIebQ.jpeg"><img src="https://miro.medium.com/max/1400/1*TEugkgXWy4uZpgfzpaIebQ.jpeg"></a>
+	<figcaption>Photo by Author, Yoho National Park in Banff, 2018 Nov</figcaption>
 </figure>
 
 <figure>
