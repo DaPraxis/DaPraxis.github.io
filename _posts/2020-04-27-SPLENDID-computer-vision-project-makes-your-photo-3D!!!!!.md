@@ -60,7 +60,6 @@ Just AMAZING right? I was as astonished as you guys. This fantastic [project](ht
 
 Want to try it out on your photos as well? It is ok if you completely have no ideas of computer vision and CNN, just follow my step in setup section below to run all the code in the block in this [**link**](https://colab.research.google.com/drive/1706ToQrkIZshRSJSHvZ1RuCiM__YX3Bz)! I recommend setting up in Colab, since it take a certain amount of your computer resource to train, and Colab cached for you.
 
-----
 
 ## Setup:
 <figure>
@@ -71,6 +70,10 @@ Want to try it out on your photos as well? It is ok if you completely have no id
 {% capture fig_img %}
 [![image-center](https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png)](https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png){: .align-center}
 {% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
 
 1. Run all the code before this code block, and drag all the photos you want to make 3D in the highlighted image folder, then run the code block to import your uploaded images.
 
@@ -85,9 +88,12 @@ and you will need to wait 2–5 minutes for each training batch, depending on yo
 [![image-center](https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png)](https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png){: .align-center}
 {% endcapture %}
 
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+
 You can find your results in the indicated area. It will output five output visuals, which include depth map estimated by [MiDaS](https://github.com/intel-isl/MiDaS), inpainted 3D mesh, and you 3D video demo in circle, swing, and zoom in motions. Simple enough huh? Keep reading if you want to know the logic behind it!
 
-----
 
 ## Theory:
 
