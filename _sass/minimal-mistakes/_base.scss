@@ -39,15 +39,15 @@ h1 {
 }
 
 h2 {
-  font-size: $h-size-4;
+  font-size: $h-size-3;
 }
 
 h3 {
-  font-size: $h-size-5;
+  font-size: $h-size-4;
 }
 
 h4 {
-  font-size: $h-size-6;
+  font-size: $h-size-5;
 }
 
 h5 {
@@ -131,7 +131,8 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    // color: $link-color-visited;
+    color: black
   }
 
   &:hover {
