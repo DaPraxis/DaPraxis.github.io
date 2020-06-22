@@ -68,10 +68,9 @@ Want to try it out on your photos as well? It is ok if you completely have no id
 	<figcaption>Import image code block</figcaption>
 </figure>
 
-<figure>
-	<a href="https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png"><img src="https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png"></a>
-	<figcaption>Import image code block</figcaption>
-</figure>
+{% capture fig_img %}
+[![image-center](https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png)](https://miro.medium.com/max/842/1*hpyCVm-BAYLkQxrH_OJ47Q.png){: .align-center}
+{% endcapture %}
 
 1. Run all the code before this code block, and drag all the photos you want to make 3D in the highlighted image folder, then run the code block to import your uploaded images.
 
@@ -82,10 +81,9 @@ Want to try it out on your photos as well? It is ok if you completely have no id
 and you will need to wait 2–5 minutes for each training batch, depending on your computer specs, and picture attributes
 
 3. BOOM! You get the RESULT!
-<figure>
-	<a href="https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png"><img src="https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png"></a>
-	<figcaption>Import image code block</figcaption>
-</figure>
+{% capture fig_img %}
+[![image-center](https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png)](https://miro.medium.com/max/626/1*eamT3dhwsrU69I1rSVq2bQ.png){: .align-center}
+{% endcapture %}
 
 You can find your results in the indicated area. It will output five output visuals, which include depth map estimated by [MiDaS](https://github.com/intel-isl/MiDaS), inpainted 3D mesh, and you 3D video demo in circle, swing, and zoom in motions. Simple enough huh? Keep reading if you want to know the logic behind it!
 
