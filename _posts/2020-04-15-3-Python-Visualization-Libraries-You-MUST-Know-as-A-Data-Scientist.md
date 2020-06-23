@@ -9,6 +9,9 @@ categories:
 last_modified_at: 2020-06-21T08:06:00-05:00
 comments: true
 toc: true
+header:
+  image: https://www.vectorstock.com/royalty-free-vector/big-data-round-visualization-vector-14256092"
+#   teaser: assets/images/unsplash-gallery-image-1-th.jpg
 ---
 
 **In** real life, data preprocessing is really a pain for most data scientists. But with the help of data visualization libraries, it actually can be fun to play with.
