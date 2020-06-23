@@ -11,6 +11,9 @@ last_modified_at: 2020-06-21T08:06:00-07:00
 comments: true
 mathjax: true
 toc: true
+header:
+    image: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
+    teaser: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
 ---
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
