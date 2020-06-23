@@ -245,7 +245,7 @@ defaults:
       comment: true
   # _portfolio
   - scope:
-      path: "_projects"
+      path: ""
       type: portfolio
     values:
       layout: single
