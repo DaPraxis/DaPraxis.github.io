@@ -1,6 +1,6 @@
 ---
-title: "Baz Boom Identity"
-excerpt: "Baz Boom design system including logo mark, website design, and branding applications."
+title: "Fizz Bang Identity"
+excerpt: "Fizz Bang design system including logo mark, website design, and branding applications."
 header:
   image: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
   teaser: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
