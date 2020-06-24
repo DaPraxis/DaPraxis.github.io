@@ -167,7 +167,11 @@ continuously with the number of tasks
   - > Often, labeled data for a related task is unavailable. In some circumstances, however, we have access to a task that is opposite of what we want to achieve.
   - **maximize the training error** using a [*gradient reversal layer*](http://proceedings.mlr.press/v37/ganin15.html). 
 + Hints
+  > learn features that might not be easy to learn just using
+the original task
 + Focusing attention
+  >  focus attention on parts of the **image** that a network
+might normally ignore. 
 + Quantization smoothing
 + Predicting inputs
 + Using the future to predict the present
