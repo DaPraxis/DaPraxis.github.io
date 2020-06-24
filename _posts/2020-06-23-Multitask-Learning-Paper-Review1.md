@@ -11,15 +11,15 @@ comments: true
 toc: true
 mathjax: true
 header:
-  image: https://miro.medium.com/max/1400/1*Q1LUvO8dxSvDGrVpHGA0bw.png
-  teaser: https://miro.medium.com/max/1400/1*Q1LUvO8dxSvDGrVpHGA0bw.png
+  image: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
+  teaser: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
 ---
 
-## An Overview of Multi-Task Learning in Deep Neural Networks (Paper 1)
+## An Overview of Multi-Task Learning in Deep Neural Networks
 > Reference: [Ruder S "An Overview of Multi-Task Learning in Deep Neural Networks", arXiv:1706.05098, Hune 2017](https://arxiv.org/abs/1706.05098)
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1706.05098.pdf) paper source
 
-### Multitask Learning in Deep Neural Net summary:
+### MTL in Deep Neural Net:
 #### Sharing types:
 + Hard Sharing 
 {% capture fig_img %}
