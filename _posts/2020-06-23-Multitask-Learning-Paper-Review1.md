@@ -60,7 +60,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Deep Relationship Networks
 > [Long, Mingsheng and Jianmin Wang. “Learning Multiple Tasks with Deep Relationship Networks.” ArXiv abs/1506.02117 (2015): n. pag.](https://www.semanticscholar.org/paper/Learning-Multiple-Tasks-with-Deep-Relationship-Long-Wang/7c61efd58584451b8988c42f2b7006eddbb291f1)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1506.02117.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1506.02117.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://d3i71xaburhd42.cloudfront.net/7c61efd58584451b8988c42f2b7006eddbb291f1/4-Figure1-1.png)](https://d3i71xaburhd42.cloudfront.net/7c61efd58584451b8988c42f2b7006eddbb291f1/4-Figure1-1.png){: .align-center}
@@ -72,7 +72,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Fully-Adaptive Feature Sharing
 >  [Lu, Y., Kumar, A., Zhai, S., Cheng, Y., Javidi, T., and Feris, R. (2016). Fullyadaptive Feature Sharing in Multi-Task Networks with Applications in Person Attribute Classification.](https://arxiv.org/abs/1611.05377)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.05377.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.05377.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://ruder.io/content/images/2017/05/fully_adaptive_feature_sharing.png)](https://ruder.io/content/images/2017/05/fully_adaptive_feature_sharing.png){: .align-center}
@@ -85,7 +85,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Cross-stitch Networks
 >  [Misra, I., Shrivastava, A., Gupta, A., and Hebert, M. (2016). Cross-stitch Networks for Multi-task Learning. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.](https://arxiv.org/abs/1604.03539)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1604.03539.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1604.03539.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://ruder.io/content/images/2017/05/cross-stitch_networks.png)](https://ruder.io/content/images/2017/05/cross-stitch_networks.png){: .align-center}
@@ -97,12 +97,12 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Low Supervision
 >  [Søgaard, A. and Goldberg, Y. (2016). Deep multi-task learning with low level tasks supervised at lower layers. Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, pages 231–235.](https://www.aclweb.org/anthology/P16-2038/)
 
-[<i class="fas fa-link"></i>](https://www.aclweb.org/anthology/P16-2038.pdf) paper source
+  [<i class="fas fa-link"></i>](https://www.aclweb.org/anthology/P16-2038.pdf) paper source
 
 + A Joint Many Task Model
 > [Hashimoto, K., Xiong, C., Tsuruoka, Y., and Socher, R. (2016). A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks.](https://arxiv.org/abs/1611.01587)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.01587.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.01587.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://media.arxiv-vanity.com/render-output/3005732/x1.png)](https://media.arxiv-vanity.com/render-output/3005732/x1.png){: .align-center}
@@ -114,7 +114,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Weighting Losses with Uncertainty
 >  [Kendall, A., Gal, Y., and Cipolla, R. (2017). Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics.](https://arxiv.org/abs/1705.07115)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.07115.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.07115.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://ruder.io/content/images/2017/05/weighting_using_uncertainty.png)](https://ruder.io/content/images/2017/05/weighting_using_uncertainty.png){: .align-center}
@@ -126,7 +126,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Tensor Factorization for MTL
 >  [Yang, Y. and Hospedales, T. (2017a). Deep Multi-task Representation Learning: A Tensor Factorisation Approach. In Proceedings of ICLR 2017](https://arxiv.org/abs/1605.06391)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1605.06391.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1605.06391.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://d3i71xaburhd42.cloudfront.net/468a80bcd4ff9b3f47beb9145ff81140777bb3f3/6-Figure1-1.png)](https://d3i71xaburhd42.cloudfront.net/468a80bcd4ff9b3f47beb9145ff81140777bb3f3/6-Figure1-1.png){: .align-center}
@@ -138,7 +138,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 + Sluice Networks
 >  [Ruder, S., Bingel, J., Augenstein, I., and Søgaard, A. (2017). Sluice networks: Learning what to share between loosely related tasks.](https://www.semanticscholar.org/paper/Sluice-networks%3A-Learning-what-to-share-between-Ruder-Bingel/e242ba1a62eb2595d89afbec2657f33d9ab4abe3)
 
-[<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.08142.pdf) paper source
+  [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.08142.pdf) paper source
 
 {% capture fig_img %}
 [![image-center](https://d3i71xaburhd42.cloudfront.net/e242ba1a62eb2595d89afbec2657f33d9ab4abe3/3-Figure1-1.png)](https://d3i71xaburhd42.cloudfront.net/e242ba1a62eb2595d89afbec2657f33d9ab4abe3/3-Figure1-1.png){: .align-center}
