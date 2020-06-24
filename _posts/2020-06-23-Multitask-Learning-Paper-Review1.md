@@ -23,7 +23,7 @@ header:
 #### Sharing types:
 + Hard Sharing 
 {% capture fig_img %}
-[![image-center](../assets/imgs/posts/MTL_overview/hard_sharing.PNG)](../assets/imgs/posts/MTL_overview/hard_sharing.PNG){: .align-center}
+[![image-center](https://ruder.io/content/images/2017/05/mtl_images-001-2.png)](https://ruder.io/content/images/2017/05/mtl_images-001-2.png){: .align-center}
 {% endcapture %}
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
@@ -34,7 +34,7 @@ Hard sharing is most commonly used in MTL, especially in MTL+neural nets. This i
 
 + Soft Sharing
 {% capture fig_img %}
-[![image-center](../assets/imgs/posts/MTL_overview/soft_sharing.PNG)](../assets/imgs/posts/MTL_overview/soft_sharing.PNG){: .align-center}
+[![image-center](https://ruder.io/content/images/size/w2000/2017/05/mtl_images-002-2.png)](https://ruder.io/content/images/size/w2000/2017/05/mtl_images-002-2.png){: .align-center}
 {% endcapture %}
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
@@ -58,6 +58,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 #### Recent works MTL in Deep Learning
 + Deep Relationship Networks
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1506.02117.pdf) paper source
+
 > [Long, Mingsheng and Jianmin Wang. “Learning Multiple Tasks with Deep Relationship Networks.” ArXiv abs/1506.02117 (2015): n. pag.](https://www.semanticscholar.org/paper/Learning-Multiple-Tasks-with-Deep-Relationship-Long-Wang/7c61efd58584451b8988c42f2b7006eddbb291f1)
 
 {% capture fig_img %}
@@ -69,6 +70,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 
 + Fully-Adaptive Feature Sharing
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.05377.pdf) paper source
+
 >  [Lu, Y., Kumar, A., Zhai, S., Cheng, Y., Javidi, T., and Feris, R. (2016). Fullyadaptive Feature Sharing in Multi-Task Networks with Applications in Person Attribute Classification.](https://arxiv.org/abs/1611.05377)
 
 {% capture fig_img %}
@@ -81,6 +83,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 
 + Cross-stitch Networks
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1604.03539.pdf) paper source
+
 >  [Misra, I., Shrivastava, A., Gupta, A., and Hebert, M. (2016). Cross-stitch Networks for Multi-task Learning. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition.](https://arxiv.org/abs/1604.03539)
 
 {% capture fig_img %}
@@ -92,12 +95,14 @@ The soft sharing on the other hand, each task has their own model and parameters
 
 + Low Supervision
 > [<i class="fas fa-link"></i>](https://www.aclweb.org/anthology/P16-2038.pdf) paper source
+
 >  [Søgaard, A. and Goldberg, Y. (2016). Deep multi-task learning with low level tasks supervised at lower layers. Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, pages 231–235.](https://www.aclweb.org/anthology/P16-2038/)
 
 Deep Bi-directional RNN
 
 + A Joint Many Task Model
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.01587.pdf) paper source
+
 >  [Hashimoto, K., Xiong, C., Tsuruoka, Y., and Socher, R. (2016). A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks.](https://arxiv.org/abs/1611.01587)
 
 {% capture fig_img %}
@@ -109,6 +114,7 @@ Deep Bi-directional RNN
 
 + Weighting Losses with Uncertainty
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.07115.pdf) paper source
+
 >  [Kendall, A., Gal, Y., and Cipolla, R. (2017). Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics.](https://arxiv.org/abs/1705.07115)
 
 {% capture fig_img %}
@@ -120,10 +126,11 @@ Deep Bi-directional RNN
 
 + Tensor Factorization for MTL
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1605.06391.pdf) paper source
+
 >  [Yang, Y. and Hospedales, T. (2017a). Deep Multi-task Representation Learning: A Tensor Factorisation Approach. In Proceedings of ICLR 2017](https://arxiv.org/abs/1605.06391)
 
 {% capture fig_img %}
-[![image-center](../assets/imgs/posts/MTL_overview/tensor_factorization.PNG)](../assets/imgs/posts/MTL_overview/tensor_factorization.PNG){: .align-center}
+[![image-center](https://d3i71xaburhd42.cloudfront.net/468a80bcd4ff9b3f47beb9145ff81140777bb3f3/6-Figure1-1.png)](https://d3i71xaburhd42.cloudfront.net/468a80bcd4ff9b3f47beb9145ff81140777bb3f3/6-Figure1-1.png){: .align-center}
 {% endcapture %}
 <figure>
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
@@ -131,6 +138,7 @@ Deep Bi-directional RNN
 
 + Sluice Networks
 > [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1705.08142.pdf) paper source
+
 >  [Ruder, S., Bingel, J., Augenstein, I., and Søgaard, A. (2017). Sluice networks: Learning what to share between loosely related tasks.](https://www.semanticscholar.org/paper/Sluice-networks%3A-Learning-what-to-share-between-Ruder-Bingel/e242ba1a62eb2595d89afbec2657f33d9ab4abe3)
 
 {% capture fig_img %}
@@ -153,8 +161,10 @@ Deep Bi-directional RNN
 
 ### Auxiliary Tasks
 > MTL is a natural fit in situations where we are interested in obtaining predictions for multiple tasks at once. Such scenarios are common for instance in **finance** or **economics forecasting**, where we might want to predict the value of many possibly related indicators, or in **bioinformatics** where we might want to predict symptoms for multiple diseases simultaneously. 
+
 > In scenarios such as **drug discovery**, where tens or hundreds of active compounds should be predicted, MTL accuracy increases
 continuously with the number of tasks
+
 + Related task
   - Using a **related task** as an auxiliary task for MTL
     - uses tasks that predict different characteristics of the road as auxiliary tasks for predicting the steering direction in a self-driving car;
@@ -164,7 +174,7 @@ continuously with the number of tasks
     - jointly predict the phoneme duration and frequency profile for [text-to-speech.](http://proceedings.mlr.press/v70/arik17a.html)
 
 + Adversarial
-  - > Often, labeled data for a related task is unavailable. In some circumstances, however, we have access to a task that is opposite of what we want to achieve.
+  > Often, labeled data for a related task is unavailable. In some circumstances, however, we have access to a task that is opposite of what we want to achieve.
   - **maximize the training error** using a [*gradient reversal layer*](http://proceedings.mlr.press/v37/ganin15.html). 
 + Hints
   > learn features that might not be easy to learn just using
