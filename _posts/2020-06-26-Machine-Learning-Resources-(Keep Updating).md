@@ -23,8 +23,10 @@ header:
 
 + NLP
     - [The Big Bad NLP Database Notebooks](https://notebooks.quantumstat.com/)
+    - [Speech and Language Processing](https://www.cs.colorado.edu/~martin/slp2.html#Chapter3)
 
 + CV
+    - [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)
     - [Paper with Code](https://paperswithcode.com/)
     - [Awesome-Computer-Vision](https://github.com/jbhuang0604/awesome-computer-vision)
     - [MedicalTorch](https://medicaltorch.readthedocs.io/en/stable/getstarted.html)
