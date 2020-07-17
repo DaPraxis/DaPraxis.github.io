@@ -35,6 +35,7 @@ Working in multiple projects:
 * fMRI image prediction brain dementia
 * Braintagger Centivizer system
 * Long-Short Term Memory Model in Time Series
+
 ### Software Engineer & 3D Modeling
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 05/2019 - 09/2019
