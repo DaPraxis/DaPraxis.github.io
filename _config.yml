@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Max Jiang"
 description              : "Ph.D. Student at the University of Toronto."
 url                      : 'https://dapraxis.github.io/'
-# baseurl                  : "/blog"
+# baseurl                  : "/about"
 repository               : 'https://github.com/DaPraxis/DaPraxis.github.io'
 teaser                   : "/assets/imgs/logo_large.png"
 logo                     : "/assets/imgs/logo.png"
