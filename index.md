@@ -1,9 +1,13 @@
 ---
 permalink: /about/
-title: "About Me"
+title: "Max Jiang"
+layout: single
 last_modified_at: 2020-06-21T10:15:22-04:00
 toc: true
 comments: false
+header:
+  overlay_image: https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 
 I am Haoyan (Max) Jiang, a fourth year B.Sc<span> double major in Computer Science & Statistics in the University of Toronto.
