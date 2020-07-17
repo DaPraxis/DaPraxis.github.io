@@ -8,7 +8,7 @@ comments: false
 
 I am Haoyan (Max) Jiang, a fourth year B.Sc<span> double major in Computer Science & Statistics in the University of Toronto.
 
-Future direct Ph.D. in the University of Toronto under the supervision of Professor [Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/).
+Direct-entry Ph.D. student in the University of Toronto under the supervision of Professor [Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/).
 
 Focusing on developing software to research in public health and medical industry, and provide data insight using Transfer Learning and Data Science models.
 
@@ -29,7 +29,12 @@ Interactive Machine Learning projects automate data processing and model learnin
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 03/2020 - present
 
-Working in multiple projects at the same time: NIH challenges, fMRI image prediction, Braintagger Centivizer system and Long-Short Term Memory Model in Time Series
+Working in multiple projects: 
+* NIH heart failure data mining challenges
+* Antidepression Drug Efficiency Analysis Based on HAMD score
+* fMRI image prediction brain dementia
+* Braintagger Centivizer system
+* Long-Short Term Memory Model in Time Series
 ### Software Engineer & 3D Modeling
 [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 - 05/2019 - 09/2019
@@ -41,7 +46,7 @@ Building and importing 3D models for famous scenic views in the world using Blen
 Provide data insight with MongoDB, using learning algorism to analyze player’s brain functionality
 
 ## Educations
-* **2021.01 - 2025.01** - *Ph.D. candidate*
+* **2020.09 - 2025.05** - *Ph.D. Student*
     - University of Toronto, Mechanical & Industrial Engineering department
     - supervised by [Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
 

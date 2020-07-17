@@ -20,7 +20,7 @@ title                    : "MJ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Max Jiang"
-description              : "Data Science Ph.D. candidate at the University of Toronto."
+description              : "Ph.D. Student at the University of Toronto."
 url                      : 'https://dapraxis.github.io/'
 # baseurl                  : "/blog"
 repository               : 'https://github.com/DaPraxis/DaPraxis.github.io'
