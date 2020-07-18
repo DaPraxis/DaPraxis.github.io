@@ -12,7 +12,7 @@ comments: true
 toc: true
 header:
   image: https://miro.medium.com/max/1400/1*wibtMkDPQLqkCGEQ2ekheQ.jpeg
-  teaser: https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+  teaser: https://miro.medium.com/max/1400/1*wibtMkDPQLqkCGEQ2ekheQ.jpeg
 ---
 > [<i class="fas fa-link"></i>](https://colab.research.google.com/drive/1706ToQrkIZshRSJSHvZ1RuCiM__YX3Bz) Code Source in Colab 
 
