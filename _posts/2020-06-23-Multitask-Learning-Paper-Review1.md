@@ -11,8 +11,8 @@ comments: true
 toc: true
 mathjax: true
 header:
-  image: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
-  teaser: https://miro.medium.com/max/3840/1*_gg1Te-7SJfk9E2D-mORfw.png
+  image: https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+  teaser: https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
 ---
 
 ## An Overview of Multi-Task Learning in Deep Neural Networks
