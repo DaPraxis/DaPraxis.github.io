@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "About Me"
-    url: https://dapraxis.github.io/
   - title: "Projects"
     url: /projects
   - title: "Posts"
