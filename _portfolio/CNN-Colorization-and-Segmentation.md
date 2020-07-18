@@ -19,13 +19,13 @@ header:
 #     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
 #     image_alt: "t-SNE visualization"
 #     text: "Feature Vector Alignment"
-# gallery1:
-#   - url: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
-#     image_path: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
-#     alt: "Visual 2"
-#   - url: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
-#     image_path: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
-#     alt: "Visual 3"
+gallery:
+  - url: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
+    image_path: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
+    alt: "Visual 2"
+  - url: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
+    image_path: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
+    alt: "Visual 3"
 ---
 > [<i class="fas fa-infinity"></i>](https://colab.research.google.com/drive/1LgpiuXeB8U7pFv2-7OBQFGIQZHDoQ295?usp=sharing) Code Source 
 
@@ -52,6 +52,6 @@ This project works with Convolutional Neural Networks and exploring its applicat
 	<figcaption>17 Flowers Dataset</figcaption>
     </figure>
 
-<!-- {% include gallery1 caption="CIFAR-10 images" %} -->
+{% include gallery caption="CIFAR-10 images" %}
 
 
