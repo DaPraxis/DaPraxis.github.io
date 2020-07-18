@@ -52,14 +52,14 @@ Focusing on Machine Learning with Software Engineering solution.
 ## Educations
 *  ### Ph.D. Student
 
-    **2020.09 - 2025.05**
+    *2020.09 - 2025.05*
 
     > - University of Toronto, Mechanical & Industrial Engineering department
     > - supervised by [Prof.Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
 
 *  ### Honored B.Sc with high distinction
 
-    **2016.09 - 2020.10**
+    *2016.09 - 2020.10*
 
     > - cGPA: 3.74/4.0
     > - University of Toronto, double major in Computer Science and Statistics 
@@ -70,19 +70,19 @@ Focusing on Machine Learning with Software Engineering solution.
 ## Awards
 *  ### Dean's List Scholar 
 
-    **2020.06**
+    *2020.06*
 
     > - honor issuer: University of Toronto Faculty of Arts & Science
     > - Outstanding group of Faculty of Arts & Science students who have a cumulative GPA of 3.50 or higher after having completed your tenth credit.
 *  ### Dean's List 
 
-    **2018.01**
+    *2018.01*
 
     > - honor issuer: University of Toronto Applied Science and Engineering
     > - Top student with high academic achievement in Engineering department
 *  ### Dean's List 
 
-    **2017.01**
+    *2017.01*
 
     > - honor issuer: University of Toronto Applied Science and Engineering
     > - Top student with high academic achievement in Engineering department
