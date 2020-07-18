@@ -19,18 +19,15 @@ header:
 #     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
 #     image_alt: "t-SNE visualization"
 #     text: "Feature Vector Alignment"
-gallery:
-  - url: blob:https://colab.research.google.com/f9d46232-93e0-4ef3-9a3f-33c3c193573c
-    image_path: blob:https://colab.research.google.com/f9d46232-93e0-4ef3-9a3f-33c3c193573c
+gallery1:
+  - url: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
+    image_path: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
     alt: "Visual 2"
-  - url: blob:https://colab.research.google.com/d205610c-c3f4-471b-9911-f686aa755c71
-    image_path: blob:https://colab.research.google.com/d205610c-c3f4-471b-9911-f686aa755c71
+  - url: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
+    image_path: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
     alt: "Visual 3"
-  - url: blob:https://colab.research.google.com/02ad743b-3438-4939-a877-9eec294c4d62
-    image_path: blob:https://colab.research.google.com/02ad743b-3438-4939-a877-9eec294c4d62
-    alt: "Visual 1"
 ---
-> [<i class="fab fa-infinity"></i>](https://colab.research.google.com/drive/1LgpiuXeB8U7pFv2-7OBQFGIQZHDoQ295?usp=sharing) Code Source 
+> [<i class="fas fa-infinity"></i>](https://colab.research.google.com/drive/1LgpiuXeB8U7pFv2-7OBQFGIQZHDoQ295?usp=sharing) Code Source 
 
 # Introduction
 This project works with Convolutional Neural Networks and exploring its applications. We will mainly focus on two famous tasks:
@@ -43,6 +40,6 @@ This project works with Convolutional Neural Networks and exploring its applicat
     - dataset: [Oxford 17 Flowers Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) 17 categories of flowers with 80 images in each set
     - approach: Using [Microsoft COCO Dataset](https://arxiv.org/abs/1405.0312), [deeplabv3](https://pytorch.org/hub/pytorch_vision_deeplabv3_resnet101/) especially as a finetuning base, and perform semantic segmentation
 
-{% include gallery caption="CIFAR-10 horse images" %}
+{% include gallery1 caption="CIFAR-10 images" %}
 
 
