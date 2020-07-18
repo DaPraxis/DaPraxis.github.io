@@ -17,6 +17,7 @@ Focusing on Machine Learning with Software Engineering solution.
 ## Experiences
 + ### Data Science Team Lead
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
+
     *05/2020 - present*
 
     -  Co-leading data science team to perform Hamilton Depression Rating Scale (HDRS) data exploration on medical effects upon anti-depression medications.
@@ -27,6 +28,7 @@ Focusing on Machine Learning with Software Engineering solution.
 
 + ### Machine Learning Researcher
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
+
     *03/2020 - present*
 
     Working in multiple projects: 
@@ -38,6 +40,7 @@ Focusing on Machine Learning with Software Engineering solution.
 
 + ### Software Engineer & 3D Modeling
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
+    
     *05/2019 - 09/2019*
 
     Driving Simulation Game for Elder People; Engine building, game logic and modeling of real-time driving experiences on web-serving applications using Babylon.js
