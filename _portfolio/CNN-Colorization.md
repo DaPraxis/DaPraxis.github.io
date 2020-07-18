@@ -249,7 +249,7 @@ We will select a subset of 24 colours and frame colourization as a pixel-wise cl
 
 The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
 
-## Helper Code
+### Helper Code
 ```ruby
 """
 Colourization of CIFAR-10 Horses via classification.
@@ -274,7 +274,7 @@ import matplotlib.pyplot as plt
 HORSE_CATEGORY = 7
 ```
 
-## Data Processing
+### Data Processing
 ```ruby
 def get_rgb_cat(xs, colours):
     """
@@ -382,7 +382,7 @@ def get_batch(x, y, batch_size):
         batch_y = y[i:i+batch_size, :,:,:]
         yield (batch_x, batch_y)
 ```
-## Torch Helper Function
+### Torch Helper Function
 ```ruby
 def get_torch_vars(xs, ys, gpu=False):
     """
@@ -458,7 +458,7 @@ def run_validation_step(cnn, criterion, test_grey, test_rgb_cat, batch_size,
     val_acc = 100 * correct / total
     return val_loss, val_acc
 ```
-## Visualizations
+### Visualizations
 ```ruby
 def plot(input, gtlabel, output, colours, path, visualize, compare_bilinear=False):
     """
@@ -560,7 +560,7 @@ def plot_activation(args, cnn):
             tensor.data.cpu().numpy()[0])
     print("visualization results are saved to %s"%outdir)
 ```
-## Trainings Loop
+### Trainings Loop
 ```ruby
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
@@ -812,7 +812,7 @@ We can see that the colorization is gnerealized with proceding training, but poo
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color.png){: .align-center}
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.png){: .align-center}
 
-## Improve with Skip Connections
+## IMPROVEMENTS with Skip Connections
 We will introduce skip connections to our previous model. A skip connection in a neural network is a connection which skips one or more layer and connects to a later layer.
 
 we will be adding a skip connection from the first layer to the last, second layer to the second last, etc. That is, the final convolution should have both the output of the previous layer and the initial greyscale input as input. This type of skip-connection is introduced by [Ronneberger et al.[2015]](https://arxiv.org/abs/1505.04597), and is called a ”UNet”. 
