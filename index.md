@@ -84,5 +84,5 @@ Focusing on Machine Learning with Software Engineering solution.
 
     **2017.01**
 
-    > honor issuer: University of Toronto Applied Science and Engineering
-    > Top student with high academic achievement in Engineering department
+    > - honor issuer: University of Toronto Applied Science and Engineering
+    > - Top student with high academic achievement in Engineering department
