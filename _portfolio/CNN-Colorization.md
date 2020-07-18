@@ -248,7 +248,7 @@ im.save('test1.png')
 We will select a subset of 24 colours and frame colourization as a pixel-wise classification problem, where we label each pixel with one of 24 colours. The 24 colours are selected using k-means clustering over colours, and selecting cluster centers
 
 The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
-
+## Utility Functions
 ### Helper Code
 ```ruby
 """
