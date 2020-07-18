@@ -33,7 +33,7 @@ gallery:
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
 # Introduction:
-This post works with word embeddings and making neural networks learn about words.
+This project works with word embeddings and making neural networks learn about words.
 
 We could try to match statistics about the words, or we could train a network that takes a sequence of words as input and learns to predict the word that comes next.
 
