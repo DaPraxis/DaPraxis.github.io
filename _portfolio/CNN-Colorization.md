@@ -98,7 +98,7 @@ This project works with Convolutional Neural Networks and exploring its applicat
 
     {% include gallery caption="CIFAR-10 Training Results" %}
 
-* Semantic Segmentation: cluster areas of an image which belongs to the same object/label, and color with the same color section; We will implement semantic segmentation elaborately in [CNN-Part2](https://dapraxis.github.io/portfolio/CNN-Semantic-Segmentation/)
+* Semantic Segmentation: cluster areas of an image which belongs to the same object/label, and color with the same color section; *We will implement semantic segmentation elaborately in [CNN-Part2](https://dapraxis.github.io/portfolio/CNN-Semantic-Segmentation/)*
     - dataset: [Oxford 17 Flowers Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) 17 categories of flowers with 80 images in each set
     - approach: Using [Microsoft COCO Dataset](https://arxiv.org/abs/1405.0312), [deeplabv3](https://pytorch.org/hub/pytorch_vision_deeplabv3_resnet101/) especially as a finetuning base, and perform semantic segmentation
 
@@ -807,10 +807,12 @@ args_dict = {
 args.update(args_dict)
 cnn = train(args)
 ```
-We can see that the colorization is gnerealized with proceding training, but not poorly on result.
+We can see that the colorization is gnerealized with proceding training, but poorly on result.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color.PNG){: .align-center}
+
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.PNG){: .align-center}
+
 ## Improve with Skip Connections
 We will introduce skip connections to our previous model. A skip connection in a neural network is a connection which skips one or more layer and connects to a later layer.
 
@@ -888,4 +890,5 @@ unet_cnn = train(args)
 The result is much better with smaller errors, better generalizations and coloring
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color2.PNG){: .align-center}
+
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g2.PNG){: .align-center}
