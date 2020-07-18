@@ -26,16 +26,7 @@ gallery:
   - url: ../assets/imgs/posts/CNN/color2.png
     image_path: ../assets/imgs/posts/CNN/color2.png
     alt: "Visual 3"
-  - url: ../assets/imgs/posts/CNN/color_g.png
-    image_path: ../assets/imgs/posts/CNN/color_g.png
-    alt: "Visual graph"
-  - url: ../assets/imgs/posts/CNN/color_g2.png
-    image_path: ../assets/imgs/posts/CNN/color_g2.png
-    alt: "Visual 3"
 gallery2:
-  - url: ../assets/imgs/posts/CNN/Segment.png
-    image_path: ../assets/imgs/posts/CNN/Segment.png
-    alt: "Visual 2"
   - url: ../assets/imgs/posts/CNN/Segment2.png
     image_path: ../assets/imgs/posts/CNN/Segment2.png
     alt: "Visual 3"
