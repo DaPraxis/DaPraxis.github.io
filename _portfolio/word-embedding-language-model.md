@@ -18,6 +18,7 @@ sidebar:
   - title: "t-SNE visualization"
     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
     image_alt: "t-SNE visualization"
+    text: "Feature Vector Alignment"
 gallery:
   - url: ../assets/imgs/posts/language_model_files/language_model_38_3.png
     image_path: ../assets/imgs/posts/language_model_files/language_model_38_3.png
