@@ -809,9 +809,8 @@ cnn = train(args)
 ```
 We can see that the colorization is gnerealized with proceding training, but poorly on result.
 
-![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color.PNG){: .align-center}
-
-![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.PNG){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.png){: .align-center}
 
 ## Improve with Skip Connections
 We will introduce skip connections to our previous model. A skip connection in a neural network is a connection which skips one or more layer and connects to a later layer.
@@ -889,6 +888,5 @@ unet_cnn = train(args)
 ```
 The result is much better with smaller errors, better generalizations and coloring
 
-![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color2.PNG){: .align-center}
-
-![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g2.PNG){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color2.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g2.png){: .align-center}
