@@ -15,10 +15,19 @@ header:
     image: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
     teaser: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
 sidebar:
-  - title: "Final Visual"
+  - title: "t-SNE visualization"
     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
     image_alt: "t-SNE visualization"
-    text: "t-SNE visualization"
+gallery:
+  - url: ../assets/imgs/posts/language_model_files/language_model_38_3.png
+    image_path: ../assets/imgs/posts/language_model_files/language_model_38_3.png
+    alt: "Visual 2"
+  - url: ../assets/imgs/posts/language_model_files/language_model_39_0.png
+    image_path: ../assets/imgs/posts/language_model_files/language_model_39_0.png
+    alt: "Visual 3"
+  - url: ../assets/imgs/posts/language_model_files/language_model_40_1.png
+    image_path: ../assets/imgs/posts/language_model_files/language_model_40_1.png
+    alt: "Visual 1"
 ---
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
@@ -26,6 +35,8 @@ sidebar:
 This post works with word embeddings and making neural networks learn about words.
 
 We could try to match statistics about the words, or we could train a network that takes a sequence of words as input and learns to predict the word that comes next.
+
+{% include gallery caption="Result Visualization" %}
 
 ## Starter code and data
 
