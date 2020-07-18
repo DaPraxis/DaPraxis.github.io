@@ -19,13 +19,13 @@ header:
 #     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
 #     image_alt: "t-SNE visualization"
 #     text: "Feature Vector Alignment"
-gallery1:
-  - url: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
-    image_path: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
-    alt: "Visual 2"
-  - url: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
-    image_path: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
-    alt: "Visual 3"
+# gallery1:
+#   - url: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
+#     image_path: https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png
+#     alt: "Visual 2"
+#   - url: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
+#     image_path: https://www.researchgate.net/publication/322148855/figure/fig1/AS:577424834662400@1514680216761/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The.png
+#     alt: "Visual 3"
 ---
 > [<i class="fas fa-infinity"></i>](https://colab.research.google.com/drive/1LgpiuXeB8U7pFv2-7OBQFGIQZHDoQ295?usp=sharing) Code Source 
 
@@ -36,10 +36,22 @@ This project works with Convolutional Neural Networks and exploring its applicat
     - difficulties: ill-posed problem -- multiple equally valid colorings
     - dataset: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) constains 60000 32x32 colour images in 10 classes, with 6000 images per class, where 50000 are training images, and 10000 are test images. The 10 classes are: horse, automobile, bird, cat, deer, dog, frog, horse, ship and truck. Our main focus in the horse class
 
+    <figure>
+	<a href="https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png">
+    <img src="https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png"></a>
+	<figcaption>CIFAR-10 Dataset</figcaption>
+    </figure>
+
 * Semantic Segmentation: cluster areas of an image which belongs to the same object/label, and color with the same color section
     - dataset: [Oxford 17 Flowers Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) 17 categories of flowers with 80 images in each set
     - approach: Using [Microsoft COCO Dataset](https://arxiv.org/abs/1405.0312), [deeplabv3](https://pytorch.org/hub/pytorch_vision_deeplabv3_resnet101/) especially as a finetuning base, and perform semantic segmentation
 
-{% include gallery1 caption="CIFAR-10 images" %}
+    <figure>
+	<a href="https://www.researchgate.net/profile/Junbin_Gao/publication/289587379/figure/fig11/AS:614171376902164@1523441275987/Some-images-of-the-Oxford-Flowers-17-dataset.png">
+    <img src="https://www.researchgate.net/profile/Junbin_Gao/publication/289587379/figure/fig11/AS:614171376902164@1523441275987/Some-images-of-the-Oxford-Flowers-17-dataset.png"></a>
+	<figcaption>17 Flowers Dataset</figcaption>
+    </figure>
+
+<!-- {% include gallery1 caption="CIFAR-10 images" %} -->
 
 
