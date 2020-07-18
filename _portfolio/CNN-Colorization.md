@@ -1,7 +1,7 @@
 ---
-title:  "Convolution Neural Network"
+title:  "Convolution Neural Network Part 1"
 search: false
-excerpt: 'Colorization, Skip Connections and Semantic Segmentation'
+excerpt: 'Colorization and Skip Connections'
 categories: 
   - Computer Vision
   - CNN
@@ -12,8 +12,8 @@ comments: true
 mathjax: true
 toc: true
 header:
-    image: https://resources.appen.com/wp-content/uploads/2019/04/SLIDER-Appen_image_annotation_05.jpg
-    teaser: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRlJQ5PW9ZldsW5qikzkz77wBYepnnNtmbNQ&usqp=CAU
+    image: https://ischooloss.files.wordpress.com/2014/04/holi.jpg
+    teaser: https://i2.wp.com/grafixartphoto.com/wp-content/uploads/2019/09/Colorization-of-Marilyn-Monroe-by-Samir-BELHAMRA-@Grafixart_photo-ColorizeToRemember.jpg?ssl=1
 # sidebar:
 #   - title: "t-SNE visualization"
 #     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
@@ -98,7 +98,7 @@ This project works with Convolutional Neural Networks and exploring its applicat
 
     {% include gallery caption="CIFAR-10 Training Results" %}
 
-* Semantic Segmentation: cluster areas of an image which belongs to the same object/label, and color with the same color section
+* Semantic Segmentation: cluster areas of an image which belongs to the same object/label, and color with the same color section; We will implement semantic segmentation elaborately in [CNN-Part2](https://dapraxis.github.io/portfolio/CNN-Semantic-Segmentation/)
     - dataset: [Oxford 17 Flowers Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/17/) 17 categories of flowers with 80 images in each set
     - approach: Using [Microsoft COCO Dataset](https://arxiv.org/abs/1405.0312), [deeplabv3](https://pytorch.org/hub/pytorch_vision_deeplabv3_resnet101/) especially as a finetuning base, and perform semantic segmentation
 
@@ -808,6 +808,7 @@ args.update(args_dict)
 cnn = train(args)
 ```
 We can see that the colorization is gnerealized with proceding training, but not poorly on result.
+
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color.PNG){: .align-center}
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.PNG){: .align-center}
 ## Improve with Skip Connections
@@ -885,5 +886,6 @@ args.update(args_dict)
 unet_cnn = train(args)
 ```
 The result is much better with smaller errors, better generalizations and coloring
+
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color2.PNG){: .align-center}
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g2.PNG){: .align-center}
