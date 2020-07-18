@@ -50,14 +50,14 @@ Focusing on Machine Learning with Software Engineering solution.
     > Provide data insight with MongoDB, using learning algorism to analyze player’s brain functionality
 
 ## Educations
-*  Ph.D. Student
+*  ### Ph.D. Student
 
     **2020.09 - 2025.05**
 
     > - University of Toronto, Mechanical & Industrial Engineering department
     > - supervised by [Prof.Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
 
-*  *Honored B.Sc<span> with high distinction* 
+*  ### Honored B.Sc with high distinction
 
     **2016.09 - 2020.10**
 
@@ -68,19 +68,19 @@ Focusing on Machine Learning with Software Engineering solution.
 * Lu Wang, Mark Chignell, Haoyan Jiang and Nipon Charoenkitkarn.“Cluster- Boosted Multi-Task Survival Analysis”. Submitted to The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
 
 ## Awards
-*  Dean's List Scholar 
+*  ### Dean's List Scholar 
 
     **2020.06**
 
     > - honor issuer: University of Toronto Faculty of Arts & Science
     > - Outstanding group of Faculty of Arts & Science students who have a cumulative GPA of 3.50 or higher after having completed your tenth credit.
-*  Dean's List 
+*  ### Dean's List 
 
     **2018.01**
 
     > - honor issuer: University of Toronto Applied Science and Engineering
     > - Top student with high academic achievement in Engineering department
-*  Dean's List 
+*  ### Dean's List 
 
     **2017.01**
 
