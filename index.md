@@ -18,63 +18,71 @@ Focusing on Machine Learning with Software Engineering solution.
 + ### Data Science Team Lead
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 
-    > *05/2020 - present*
+    *05/2020 - present*
 
-    -  Co-leading data science team to perform Hamilton Depression Rating Scale (HDRS) data exploration on medical effects upon anti-depression medications.
+    > -  Co-leading data science team to perform Hamilton Depression Rating Scale (HDRS) data exploration on medical effects upon anti-depression medications.
 
-    - Framingham data from NIH, risk factor analysis for dementia and heart failure; Manage a team of five developing data mining tool for medical data cleaning, preprocessing and visualization on Flask and Dash.
+    > - Framingham data from NIH, risk factor analysis for dementia and heart failure; Manage a team of five developing data mining tool for medical data cleaning, preprocessing and visualization on Flask and Dash.
 
-    - fMRI image prediction brain dementia
+    > - fMRI image prediction brain dementia
 
 + ### Machine Learning Researcher
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 
-    > *03/2020 - present*
+    *03/2020 - present*
 
-    Working in multiple projects: 
-    * NIH heart failure data mining challenges
-    * Antidepression Drug Efficiency Analysis Based on HAMD score
-    * fMRI image prediction brain dementia
-    * Braintagger Centivizer system
-    * Long-Short Term Memory Model in Time Series
+    > Working in multiple projects: 
+    > * NIH heart failure data mining challenges
+    > * Antidepression Drug Efficiency Analysis Based on HAMD score
+    > * fMRI image prediction brain dementia
+    > * Braintagger Centivizer system
+    > * Long-Short Term Memory Model in Time Series
 
 + ### Software Engineer & 3D Modeling
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
     
-    > *05/2019 - 09/2019*
+    *05/2019 - 09/2019*
 
-    Driving Simulation Game for Elder People; Engine building, game logic and modeling of real-time driving experiences on web-serving applications using Babylon.js
+    > Driving Simulation Game for Elder People; Engine building, game logic and modeling of real-time driving experiences on web-serving applications using Babylon.js
 
-    Building and importing 3D models for famous scenic views in the world using Blender
+    > Building and importing 3D models for famous scenic views in the world using Blender
 
-    Provide data insight with MongoDB, using learning algorism to analyze player’s brain functionality
+    > Provide data insight with MongoDB, using learning algorism to analyze player’s brain functionality
 
 ## Educations
-*  *Ph.D. Student*
+*  Ph.D. Student
 
-    > **2020.09 - 2025.05**
-    - University of Toronto, Mechanical & Industrial Engineering department
-    - supervised by [Prof.Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
+    **2020.09 - 2025.05**
+
+    > - University of Toronto, Mechanical & Industrial Engineering department
+    > - supervised by [Prof.Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
 
 *  *Honored B.Sc<span> with high distinction* 
 
-    > **2016.09 - 2020.10**
-    - cGPA: 3.74/4.0
-    - University of Toronto, double major in Computer Science and Statistics 
+    **2016.09 - 2020.10**
+
+    > - cGPA: 3.74/4.0
+    > - University of Toronto, double major in Computer Science and Statistics 
 
 ## Publications
 * Lu Wang, Mark Chignell, Haoyan Jiang and Nipon Charoenkitkarn.“Cluster- Boosted Multi-Task Survival Analysis”. Submitted to The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
 
 ## Awards
 *  Dean's List Scholar 
-    > **2020.06**
-    - honor issuer: University of Toronto Faculty of Arts & Science
-    - Outstanding group of Faculty of Arts & Science students who have a cumulative GPA of 3.50 or higher after having completed your tenth credit.
+
+    **2020.06**
+
+    > - honor issuer: University of Toronto Faculty of Arts & Science
+    > - Outstanding group of Faculty of Arts & Science students who have a cumulative GPA of 3.50 or higher after having completed your tenth credit.
 *  Dean's List 
-    > **2018.01**
-    - honor issuer: University of Toronto Applied Science and Engineering
-    - Top student with high academic achievement in Engineering department
+
+    **2018.01**
+
+    > - honor issuer: University of Toronto Applied Science and Engineering
+    > - Top student with high academic achievement in Engineering department
 *  Dean's List 
-    > **2017.01**
-    - honor issuer: University of Toronto Applied Science and Engineering
-    - Top student with high academic achievement in Engineering department
+
+    **2017.01**
+
+    > honor issuer: University of Toronto Applied Science and Engineering
+    > Top student with high academic achievement in Engineering department
