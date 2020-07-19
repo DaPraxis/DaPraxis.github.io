@@ -2,17 +2,18 @@
 title: "Max Jiang"
 layout: single
 toc: true
+toc_sticky: true
 comments: false
 header:
   overlay_image: https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 ## About Me
-I am Haoyan (Max) Jiang, a fourth year B.Sc<span> double major in Computer Science & Statistics in the University of Toronto.
+I am **Haoyan (Max) Jiang**, a fourth year Honored B.Sc<span> double major in Computer Science & Statistics in the University of Toronto.
 
 Direct-entry Ph.D. student in the University of Toronto under the supervision of [Professor Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/).
 
-Focusing on Machine Learning with Software Engineering solution.
+Exploring *Machine Learning* with Software Engineering solution.
 
 ## Experiences
 + ### Data Science Team Lead

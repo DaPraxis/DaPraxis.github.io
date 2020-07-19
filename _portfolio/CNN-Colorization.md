@@ -11,6 +11,7 @@ last_modified_at: 2020-07-18T08:06:00-07:00
 comments: true
 mathjax: true
 toc: true
+toc_sticky: true
 header:
     image: https://ischooloss.files.wordpress.com/2014/04/holi.jpg
     teaser: https://i2.wp.com/grafixartphoto.com/wp-content/uploads/2019/09/Colorization-of-Marilyn-Monroe-by-Samir-BELHAMRA-@Grafixart_photo-ColorizeToRemember.jpg?ssl=1

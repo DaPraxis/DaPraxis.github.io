@@ -9,6 +9,7 @@ categories:
 last_modified_at: 2020-06-21T08:06:00-05:00
 comments: true
 toc: true
+toc_sticky: true
 header:
   image: https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
   teaser: ../assets/imgs/posts/visual3.png
