@@ -13,7 +13,7 @@ mathjax: true
 toc: true
 toc_sticky: true
 header:
-    image: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
+    image: https://images.unsplash.com/photo-1575385151519-05e02c4f734f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80
     teaser: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
 sidebar:
   - title: "t-SNE visualization"
