@@ -54,7 +54,7 @@ This project continues the talk from [CNN Part 1](https://dapraxis.github.io/por
   Our task is simpily a **binary semantic segmentation task**, which classifies flower and its background. 
 
 # Implementation
-Jump to [model Fine-tuning](##Fine-tuning-Model) first to see Transfer Learning implementation and results
+Jump to [model Fine-tuning](#fine-tuning-model) first to see Transfer Learning implementation and results
 ## Utility Code
 ### Helper Functions
 ```ruby

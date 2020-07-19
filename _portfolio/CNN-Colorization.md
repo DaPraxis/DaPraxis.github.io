@@ -249,7 +249,7 @@ We will select a subset of 24 colours and frame colourization as a pixel-wise cl
 
 The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
 
-Jump to [modeling](##Model-!!!!!!!) first to see Transfer Learning implementation and results
+Jump to [modeling](#Model-) first to see Transfer Learning implementation and results
 ## Utility Functions
 ### Helper Code
 ```ruby
