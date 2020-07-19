@@ -54,6 +54,7 @@ This project continues the talk from [CNN Part 1](https://dapraxis.github.io/por
   Our task is simpily a **binary semantic segmentation task**, which classifies flower and its background. 
 
 # Implementation
+Jump to [model Fine-tuning](##Fine-tuning-Model) first to see Transfer Learning implementation and results
 ## Utility Code
 ### Helper Functions
 ```ruby
@@ -288,7 +289,7 @@ def run_validation_step(args, epoch, model, loader, plotpath=None):
 ```
 
 ## Fine-tuning Model
-For this task, we want to fine-tune only the last layer in our downloaded deeplabv3. We do this by keeping track of weights we want to update in `learned_parameters`. 
+For this task, we want to fine-tune only the **last layer** in our downloaded deeplabv3. We do this by keeping track of weights we want to update in `learned_parameters`. 
             
 Use the PyTorch utility [`Model.named_parameters()`](https://pytorch.org/docs/stable/nn.html), which returns an iterator over all the weight matrices of the model. 
 
