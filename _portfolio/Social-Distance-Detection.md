@@ -35,3 +35,7 @@ gallery:
 {% capture fig_img %}
 [![image-center](https://i.imgur.com/cS7Fqci.gif)](https://i.imgur.com/cS7Fqci.gif){: .align-center}
 {% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
