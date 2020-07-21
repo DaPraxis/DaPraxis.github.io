@@ -10,7 +10,7 @@ categories:
   - Software Engineering
 last_modified_at: 2020-07-19T08:06:00-07:00
 comments: true
-mathjax: true
+# mathjax: true
 toc: true
 toc_sticky: true
 header:
