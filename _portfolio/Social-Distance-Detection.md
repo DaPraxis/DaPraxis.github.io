@@ -299,6 +299,13 @@ for i in range(len(frame_array)):
     out.write(frame_array[i])
 out.release()
 ```
+{% capture fig_img %}
+[![image-center](https://i.imgur.com/kKUOVqR.gif)](https://i.imgur.com/kKUOVqR.gif){: .align-center}
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
 
 # Interesting Discovery
 Detectron2 is also suitable for Semantic Segmentation with convience. 
