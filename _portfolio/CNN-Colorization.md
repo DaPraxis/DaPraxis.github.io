@@ -13,7 +13,7 @@ mathjax: true
 toc: true
 toc_sticky: true
 header:
-    image: https://ischooloss.files.wordpress.com/2014/04/holi.jpg
+    image: https://images.unsplash.com/photo-1525697472245-fb8fd8594791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
     teaser: https://i2.wp.com/grafixartphoto.com/wp-content/uploads/2019/09/Colorization-of-Marilyn-Monroe-by-Samir-BELHAMRA-@Grafixart_photo-ColorizeToRemember.jpg?ssl=1
 # sidebar:
 #   - title: "t-SNE visualization"
@@ -111,7 +111,14 @@ This project works with Convolutional Neural Networks and exploring its applicat
 
     {% include gallery id="gallery2" caption="17 Flowers Training Results" %}
 
-## Starter Code
+# Task 1: Colorization Classification
+We will select a subset of 24 colours and frame colourization as a pixel-wise classification problem, where we label each pixel with one of 24 colours. The 24 colours are selected using k-means clustering over colours, and selecting cluster centers
+
+The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
+
+PS: You can jump to [Model section](#model-) first to get the idea in machine learning, since I have already got python dirty work covered for you 😛 
+
+## Data Handeling
 ### Helper Functions
 ```ruby
 import os
@@ -245,12 +252,6 @@ im.save('test1.png')
 ```
 {% include gallery id="gallery3" caption="Visualize 9 loaded horses" %}
 
-# Task 1: Colorization Classification
-We will select a subset of 24 colours and frame colourization as a pixel-wise classification problem, where we label each pixel with one of 24 colours. The 24 colours are selected using k-means clustering over colours, and selecting cluster centers
-
-The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
-
-Jump to [modeling](#Model-) first to see Transfer Learning implementation and results
 ## Utility Functions
 ### Helper Code
 ```ruby
@@ -816,6 +817,11 @@ We can see that the colorization is gnerealized with proceding training, but poo
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g.png){: .align-center}
 
 ## IMPROVEMENTS with Skip Connections
+<figure>
+	<a href="https://i.stack.imgur.com/iwHz1.png">
+    <img src="https://i.stack.imgur.com/iwHz1.png"></a>
+	<figcaption>Skip Connections</figcaption>
+</figure>
 We will introduce skip connections to our previous model. A skip connection in a neural network is a connection which skips one or more layer and connects to a later layer.
 
 we will be adding a skip connection from the first layer to the last, second layer to the second last, etc. That is, the final convolution should have both the output of the previous layer and the initial greyscale input as input. This type of skip-connection is introduced by [Ronneberger et al.[2015]](https://arxiv.org/abs/1505.04597), and is called a ”UNet”. 
@@ -893,3 +899,14 @@ The result is much better with smaller errors, better generalizations and colori
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color2.png){: .align-center}
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/CNN/color_g2.png){: .align-center}
+
+# Continues ...
+{% capture fig_img %}
+[![image-center](https://i.pinimg.com/originals/2e/b2/5d/2eb25d7e596698a326cb18ea6ad72f2a.gif)](https://i.pinimg.com/originals/2e/b2/5d/2eb25d7e596698a326cb18ea6ad72f2a.gif){: .align-center}
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+Now we have our colorization task settles, go to the next part to see the [Semantic Segmentation](https://dapraxis.github.io/portfolio/CNN-Semantic-Segmentation/)
+

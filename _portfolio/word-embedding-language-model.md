@@ -34,7 +34,7 @@ gallery:
 > [<i class="fab fa-github"></i>](https://github.com/DaPraxis/blog_material/tree/master/language_model) Code Source 
 
 # Introduction:
-This project works with word embeddings and making neural networks learn about words.
+This project works with word embeddings and making neural networks learn about words. 📖
 
 We could try to match statistics about the words, or we could train a network that takes a sequence of words as input and learns to predict the word that comes next.
 
@@ -44,7 +44,33 @@ We could try to match statistics about the words, or we could train a network th
 
 Look at the file *raw_sentences.txt*.
 
-It contains the sentences that we will be using for this assignment.
+> No ,  he says now .
+And what did he do ?
+ The money 's there .
+That was less than a year ago .
+But he made only the first .
+There 's still time for them to do it .
+But he should nt have .
+ They have to come down to the people .
+I do nt know where that is .
+No , I would nt .
+Who Will It Be ?
+And no , I was not the one .
+You could do a  Where are they now ?
+ There 's no place like it that I know of .
+Be here now , and so on .
+It 's not you or him , it 's both of you .
+So it 's not going to get in my way .
+When it 's time to go , it 's time to go .
+ No one 's going to do any of it for us .
+ Well , I want more .
+Will they make it ?
+Who to take into school or not take into school ?
+But it 's about to get one just the same .
+ We all have it .
+So we will be .
+
+It contains the sentences that we are going to analyse
 These sentences are fairly simple ones and cover a vocabulary of only 250 words.
 
 First, data import
@@ -116,9 +142,8 @@ print(data['train_targets'][:10])
 
 
 Now *data* is a Python dict which contains the vocabulary, as well as the inputs and targets for all three splits of the data. *data*['vocab'] is a list of the 250 words in the dictionary; *data*['vocab'][0] is the word with index 0, and so on. *data*['train_inputs'] is a 372,500 x 3 matrix where each row gives the indices of the 3 context words for one of the 372,500 training cases.
-*data*['train_targets'] is a vector giving the index of the target word for each training case. The validation and test sets are handled analogously.
 
-Even though you only have to modify two specific locations in the code, you may want to read through this code before starting the assignment. 
+*data*['train_targets'] is a vector giving the index of the target word for each training case. The validation and test sets are handled analogously.
 
 # Part 1: GLoVE Word Representations
 
@@ -135,10 +160,7 @@ We have provided a few functions for training the embedding:
 *   *loss_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$ (collection of $$V$$ embedding vectors, each d-dimensional); $$V\times 1$$ vector $$\mathbf{b}$$ (collection of $$V$$ bias terms); $$V \times V$$ log co-occurrence matrix. OUTPUT - loss of the GLoVE objective
 *   *grad_GLoVE:* INPUT - $$V\times d$$ matrix $$W$$, $$V\times 1$$ vector b, and $$V\times V$$ log co-occurrence matrix. OUTPUT - $$V\times d$$ matrix grad_W containing the gradient of the loss function w.r.t. $$W$$; $$V\times 1$$ vector grad_b which is the gradient of the loss function w.r.t. $$\mathbf{b}$$.
 
-Run the code to compute the co-occurence matrix.
-Make sure to add a 1 to the occurences, so there are no 0's in the matrix when we take the elementwise log of the matrix.
-
-
+The math just looks **awful** huh? Some code will make sense!
 
 ```ruby
 vocab_size = 250
@@ -234,41 +256,19 @@ for embedding_dim in tqdm(embedding_dims):
     100%|██████████| 3/3 [00:11<00:00,  3.85s/it]
 
 
-Plot the training and validation losses against the embedding dimension.
-
-
-```ruby
-pylab.loglog(embedding_dims, final_train_losses)
-pylab.xlabel("Embedding Dimension")
-pylab.ylabel("Training Loss")
-pylab.legend()
-```
-
-    No handles with labels found to put in legend.
-    <matplotlib.legend.Legend at 0x7f022b629208>
+Plot the *training* and *validation* losses against the embedding dimension.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_15_2.png){: .align-center}
-
-```ruby
-pylab.loglog(embedding_dims, final_val_losses)
-pylab.xlabel("Embedding Dimension")
-pylab.ylabel("Validation Loss")
-pylab.legend()
-```
-
-    No handles with labels found to put in legend.
-
-    <matplotlib.legend.Legend at 0x7f022b566390>
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_16_2.png){: .align-center}
 
 Some questions to ask yourself:
 
-1.  Given the vocabulary size $$V$$ and embedding dimensionality $$d$$, how many parameters does the GLoVE model have?
+1. Given the vocabulary size $$V$$ and embedding dimensionality $$d$$, how many parameters does the GLoVE model have?
 
   > $$V\times d + d$$
   
-2.  Write the gradient of the loss function with respect to one parameter vector $$\mathbf{w}_i$$.
+2. Write the gradient of the loss function with respect to one parameter vector $$\mathbf{w}_i$$.
 
  > $$\frac{\partial L}{\partial w_i} = 2\sum_{j=1, j\neq i}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$$
 $$= 4\sum_{j=1}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$$
@@ -276,7 +276,7 @@ $$= 4\sum_{j=1}^{V}(w_i^Tw_j + b_i + b_j - \log{X_{ij}})w_j$$
   > $$\frac{\partial L}{\partial b_i} = 2\sum_{j=1, j\neq i}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$$
 $$= 4\sum_{j=1}^{V}w_i^Tw_j + b_i + b_j - \log{X_{ij}}$$
 
-3.  Train the model with varying dimensionality $$d$$.
+3. Train the model with varying dimensionality $$d$$.
 Which $$d$$ leads to optimal validation performance?
 Why does / doesn't larger $$d$$ always lead to better validation error?
 
@@ -350,9 +350,6 @@ class Params(object):
         return cls(word_embedding_weights, embed_to_hid_weights, hid_to_output_weights,
                    hid_bias, output_bias)
 
-    ###### The functions below are Python's somewhat oddball way of overloading operators, so that
-    ###### we can do arithmetic on Params instances. You don't need to understand this to do the assignment.
-
     def __mul__(self, a):
         return self.__class__(a * self.word_embedding_weights,
                               a * self.embed_to_hid_weights,
@@ -372,10 +369,7 @@ class Params(object):
 
     def __sub__(self, other):
         return self + -1. * other
-```
 
-
-```ruby
 class Activations(object):
     """A class representing the activations of the units in the network. This class has three fields:
 
@@ -391,9 +385,8 @@ class Activations(object):
         self.output_layer = output_layer
 
 def get_batches(inputs, targets, batch_size, shuffle=True):
-    """Divide a dataset (usually the training set) into mini-batches of a given size. This is a
-    'generator', i.e. something you can use in a for loop. You don't need to understand how it
-    works to do the assignment."""
+    """Divide a dataset (usually the training set) into mini-batches of a given size.
+    """
 
     if inputs.shape[0] % batch_size != 0:
         raise RuntimeError('The number of data points must be a multiple of the batch size.')
@@ -410,6 +403,7 @@ def get_batches(inputs, targets, batch_size, shuffle=True):
 ```
 
 Now, we will implement a method which computes the gradient using backpropagation.
+
 To start out, the *Model* class contains several important methods used in training:
 
 
@@ -425,22 +419,6 @@ You will need to complete the implementation of two additional methods which are
 It uses the derivatives computed by *compute_loss_derivative*.
 Some parts are already filled in for you, but you need to compute the matrices of derivatives for *embed_to_hid_weights*, *hid_bias*, *hid_to_output_weights*, and *output_bias*.
 These matrices have the same sizes as the parameter matrices (see previous section).
-
-In order to implement backpropagation efficiently, you need to express the computations in terms of matrix operations, rather than *for* loops.
-You should first work through the derivatives on pencil and paper.
-First, apply the chain rule to compute the derivatives with respect to individual units, weights, and biases.
-Next, take the formulas you've derived, and express them in matrix form.
-You should be able to express all of the required computations using only matrix multiplication, matrix transpose, and elementwise operations --- no *for* loops!
-
-If you want inspiration, read through the code for *Model.compute_activations* and try to understand how the matrix operations correspond to the computations performed by all the units in the network.
-        
-To make your life easier, we have provided the routine *checking.check_gradients*, which checks your gradients using finite differences.
-You should make sure this check passes before continuing with the assignment.
-
-
-
-
-
 
 ```ruby
   class Model(object):
@@ -549,11 +527,7 @@ You should make sure this check passes before continuing with the assignment.
              input_batch - the indices of the context words
              activations - an Activations class representing the output of Model.compute_activations
              loss_derivative - the matrix of derivatives computed by compute_loss_derivative
-             
-        Part of this function is already completed, but you need to fill in the derivative
-        computations for hid_to_output_weights_grad, output_bias_grad, embed_to_hid_weights_grad,
-        and hid_bias_grad. See the documentation for the Params class for a description of what
-        these matrices represent."""
+        """
 
         # The matrix with values dC / dz_j, where dz_j is the input to the jth hidden unit,
         # i.e. y_j = 1 / (1 + e^{-z_j})
@@ -655,8 +629,6 @@ You should make sure this check passes before continuing with the assignment.
 ```
 
 Perform routine *checking.check_gradients*, which checks your gradients using finite differences.
-You should make sure this check passes before continuing
-
 
 ```ruby
 def relative_error(a, b):
@@ -863,9 +835,8 @@ It takes two arguments:
 
 
 As the model trains, the script prints out some numbers that tell you how well the training is going.
+
 It shows:
-
-
 *   The cross entropy on the last 100 mini-batches of the training set. This is shown after every 100 mini-batches.
 *   The cross entropy on the entire validation set every 1000 mini-batches of training.
 
@@ -1054,7 +1025,7 @@ trained_model = train(embedding_dim, num_hid)
 
 
 # Part 4: Analysis
-
+## Trainings & Embeddings
 In this part, we first train a model with a 16-dimensional embedding and 128 hidden units, as discussed in the previous section;
 
 we will use this trained model for the remainder of this section.
@@ -1074,8 +1045,7 @@ We also include:
 
 
 *    *tsne_plot_representation* creates a 2-dimensional embedding of the distributed representation space using
-an algorithm called t-SNE. (You don’t need to know what this is for the assignment, but we
-may cover it later in the course.) Nearby points in this 2-D space are meant to correspond to
+an algorithm called t-SNE. Nearby points in this 2-D space are meant to correspond to
 nearby points in the 16-D space.
 
 
@@ -1264,31 +1234,8 @@ def plot_2d_GLoVE_representation(W_final, b_final):
     pylab.ylim(mapped_X[:, 1].min(), mapped_X[:, 1].max())
     pylab.show()
 ```
-
-Using these methods, please answer the following questions, each of which is worth 1 point.
-
-
-
-1.   Pick three words from the vocabulary that go well together (for example, ‘*government of united*’,‘*city of new*’, ‘*life in the*’, ‘*he is the*’ etc.).
-Use the model to predict the next word.
-Does the model give sensible predictions?
-Try to find an example where it makes a plausible prediction even though the 4-gram wasn’t present in the dataset (*raw_sentences.txt*).
-To help you out, the function *find_occurrences* lists the words that appear after a given 3-gram in the training set.
-
-2.   Plot the 2-dimensional visualization using the method *tsne_plot_representation*.
-Look at the plot and find a few clusters of related words.
-What do the words in each cluster have in common?
-Plot the 2-dimensional visualization using the method *tsne_plot_GLoVE_representation* for a 256 dimensional embedding.
-How do the t-SNE embeddings for both models compare?
-Plot the 2-dimensional visualization using the method *plot_2d_GLoVE_representation*.
-How does this compare to the t-SNE embeddings?
-(You don’t need to include the plots with your submission.)
-
-3.   Are the words ‘*new*’ and ‘*york*’ close together in the learned representation?
-Why or why not?
-
-4.   Which pair of words is closer together in the learned representation: (‘*government*’, ‘*political*’), or (‘*government*’, ‘*university*’)?
-Why do you think this is?
+## Let's Play Around
+Now we have our model here, let's see how it behaves in practice!
 
 ```ruby
 trained_model.predict_next_word("she", "is", "a")
@@ -1314,7 +1261,7 @@ find_occurrences("she", "is", "a")
 
 - Compared with the second tsne GLoVE plot which has embedded dimension of 256, the first tsne plot has 250 embedded dimension, converges with similar 110 iterations, and has smaller error of about 0.633. The first model trains much slower than GLoVE model, while this tsne graph has more distinguishable clusters, which classifies better than GLoVE model. Some example cluster of words in the first model are: ("has", "have", "had"), ("might", "will", "would", "should", "can", "may", "could"), while the second model using GLoVE groups "see" and "say" with "would", "have" with "called". The first model with neural net has more precise and clear classification result than the second model.
 
-  For the third plot, it plots the 2d GLoVE model without tsne, while the fourth plot represents the same model with tsne, converges around 110 iteration with about 0.304 error. Compared with the third plot, the ourth plot with tsne has better clustering, while the third plot is more dispersed and distracted. 
+    For the third plot, it plots the 2d GLoVE model without tsne, while the fourth plot represents the same model with tsne, converges around 110 iteration with about 0.304 error. Compared with the third plot, the ourth plot with tsne has better clustering, while the third plot is more dispersed and distracted. 
 
 
 ```ruby
@@ -1410,7 +1357,7 @@ tsne_plot_GLoVE_representation(W_final_2d, b_final_2d)
 
 ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/language_model_files/language_model_40_1.png){: .align-center}
 
-3. As we can see, "new" and "york" are not close together, which is also as expected, because if two words close together, this means that the similarity between two words are very large. While "new" and "york" have very different meanings and nature in language, and should not be categorized into the same group.
+- As we can see, "new" and "york" are not close together, which is also as expected, because if two words close together, this means that the similarity between two words are very large. While "new" and "york" have very different meanings and nature in language, and should not be categorized into the same group.
 
 
 ```ruby
@@ -1444,7 +1391,7 @@ print(trained_model.display_nearest_words("york"))
     None
 
 
-4. Comparing ("goverment", "political") and ("government", "university"), "government" is more close to "university" rather than "political". This is plausible, because both of the government and university are noun in a sentance, while political is subjective.   
+- Comparing ("goverment", "political") and ("government", "university"), "government" is more close to "university" rather than "political". This is plausible, because both of the government and university are noun in a sentance, while political is subjective.   
 
 
 ```ruby
@@ -1454,4 +1401,13 @@ print(trained_model.word_distance("government", "university"))
 
     1.4021420047033426
     0.9350013818643479
+
+{% capture fig_img %}
+[![image-center](https://acegif.com/wp-content/uploads/howling-wolf-m.gif)](https://acegif.com/wp-content/uploads/howling-wolf-m.gif){: .align-center}
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+Looks nice huh? Stay sharp! 😎
 
