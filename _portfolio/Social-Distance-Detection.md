@@ -1,5 +1,5 @@
 ---
-title:  "Social Distance Detection App - Phase 1"
+title:  "Social Distance Detection Application - Phase 1"
 search: false
 excerpt: 'Object Detection, Bird View Coordinates Transformation and COVID-Risky Area Representation'
 categories: 
@@ -41,6 +41,9 @@ gallery:
 </figure>
 
 # Project Baseline
+In this project, we are building a robust program detecting if people are properly social distanced in time inside a video, especially for survilance cameras. This project is inspired by the current situation when COVID goes rampage and US government does poorly containing the virus 😷. 
+
+This app uses machine learning techniques to identify people that are *poorly social distanced*, analyse *risk factors in the environment* and marks the *public facilities that are vulnerable in design*. 
 ## Dependencies
 We are using Detectron2 and pretrained on COCO dataset, tuned with Pytorch framework and TorchVision, image processing with CV2
 ```ruby
@@ -99,7 +102,7 @@ while(cap.isOpened()):
 ```
 
 ### Get Predictor from Detectron2 Model
-With threshold of accuracy 0.9
+Get model prediction with threshold of accuracy 0.9
 ```ruby
 cfg = get_cfg()
 
@@ -131,7 +134,7 @@ Output Format:
         [ 535.2610,  101.2152,  571.6677,  242.2153]], device='cuda:0')), scores: tensor([0.9986, 0.9971, 0.9944, 0.9941, 0.9897, 0.9739, 0.9634, 0.9527, 0.9287,
         0.9253], device='cuda:0'), pred_classes: tensor([ 0,  0,  0,  0,  0,  0, 28,  0,  2,  0], device='cuda:0')])}
 ```
-### Select Only Person
+### Select Only "Person"
 All the boxes are the four corners coordinates for each detection box, and pred_classes are categorical encoding for each object category. Our focus is just person, which labeled with 0
 
 Noted that PIL and CV2 color are inverted. It shows to be red for all people right now, but actually in blue. Can also be solved by `RGBtoBRG`
@@ -186,6 +189,7 @@ def find_closest(dist,num,thresh):
   return p1,p2,d
 ```
 ## Code Person Below Thresholds as Red
+This code draw a red square for all those people below threshold
 ```ruby
 def change_2_red(img,person,p1,p2):
   risky = np.unique(p1+p2)
@@ -204,6 +208,11 @@ def change_2_red(img,person,p1,p2):
 </figure>
 
 ## Video and Picture Heatmap
+We are using the Heatmappy library for now, to draw heatmap on each frame. For each point, you can customize the radius, intensity and opacity when you pass parameters into the `Heatmapper` with ` heatmapper = Heatmapper(point_diameter=..., point_strength=..., opacity=...)` 
+
+The heatmap point will starts from blue color. With more overlap it has with other circles, it will transit from blue to green, yello then red.
+
+For each frame, we remeber the location where people are not properly social distanced, and draw a heat point on those locations, so that we can see the heatmap aggregates with time, and indicates the area that is *dangerous*
 ```ruby
 !pip install heatmappy
 
@@ -227,7 +236,8 @@ heatmap.save('heatmap.png')
   {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
 </figure>
 
-# Ready for Production
+# Production Stream
+Now we have everything ready, let's wire each pieces together!
 ```ruby
 import os
 import re
@@ -330,16 +340,44 @@ cv2_imshow(out.get_image()[:, :, ::-1])
 # MORE To Come!
 + Phase 2:
     - Customizable methods for bird view distance mesuring: 
-    Currently, we are using predefined spacial library measured in Euclidean distance, but more elastic and robust computer vision can be used for more accurate distance measuring
+
+      Currently, we are using predefined [spacial library](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html) measured in Euclidean distance, but more elastic and robust computer vision can be used for more accurate distance measuring
+
     - Make reference height and measure distance to reference objects:
-    The distance we have right now is relative to image, not to reality. We can use the imformation from Detectron2 about the other objects as a reference, and measure distance between people relative to it. e.g. car in the picture can be height of 1m, we measure the real-life distance based on car-height-to-people-distance ratio
+
+      The distance we have right now is relative to image, not to reality. We can use the imformation from Detectron2 about the other objects as a reference, and measure distance between people relative to it. e.g. car in the picture can be height of 1m, we measure the real-life distance based on car-height-to-people-distance ratio
+      <figure>
+        <a href="https://miro.medium.com/max/875/1*Qc1jkFF4gpYbEQiPRJx-Yg.png">
+          <img src="https://miro.medium.com/max/875/1*Qc1jkFF4gpYbEQiPRJx-Yg.png"></a>
+        <figcaption>Bird View Illustration</figcaption>
+      </figure>
+
     - Better heatmap/hotspot in frame:
-    Currently, the heatmap is drawn as circles, but better representation can be circles that align with ground level in video
+    
+      Currently, the heatmap is drawn as circles, but better representation can be circles that align with ground level in video
+
     - More Datasets:
-    Make product robust to videos in general, such as scaled, rotated and blurred frames on different datasets
+    
+      Make product robust to videos in general, such as scaled, rotated and blurred frames on different datasets
+
 + Phase 3:
-    - Produce with Streamlit and serves in real-life server:
+    - Produce with [Streamlit](https://www.streamlit.io/) and serves in real-life server:
     Allow users to upload their own videos, and customize on parameters
+
 + Phase 4:
     - More Generalized Datasets:
-    Transfer learning on Detectron2 such that detection works robustly in poor/abnormal videos, such as videos taken in severe weathers
+
+      Transfer learning on Detectron2 such that detection works robustly in poor/abnormal videos, such as videos taken in severe weathers
+
+## Volia!
+If you are interested in my projects or have any new ideas you wanna talk about, feel free to contact me!
+{% capture fig_img %}
+[![image-center](https://media1.giphy.com/media/f0TvnEmF5yPLO/giphy.gif)](https://media1.giphy.com/media/f0TvnEmF5yPLO/giphy.gif){: .align-center}
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+
+A **BEER** would be perfect, but remeber **NO CORONA!** 😊 
+<style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 15px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#000000 !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 15px 7px 10px !important;font-size: 20px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/MaxJiang"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a Beer"><span style="margin-left:5px;font-size:19px !important;">Buy me a Beer</span></a>
