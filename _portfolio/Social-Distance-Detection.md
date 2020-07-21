@@ -369,8 +369,8 @@ cv2_imshow(out.get_image()[:, :, ::-1])
 
       Transfer learning on Detectron2 such that detection works robustly in poor/abnormal videos, such as videos taken in severe weathers
 
-## Volia!
-If you are interested in my projects or have any new ideas you wanna talk about, feel free to contact me!
+# Volia!
+If you are interested in my projects or have any new ideas you wanna talk about, feel free to [contact](mailto:haoyanhy.jiang@mail.utoronto.ca) me!
 {% capture fig_img %}
 [![image-center](https://media1.giphy.com/media/f0TvnEmF5yPLO/giphy.gif)](https://media1.giphy.com/media/f0TvnEmF5yPLO/giphy.gif){: .align-center}
 {% endcapture %}
