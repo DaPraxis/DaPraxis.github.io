@@ -11,7 +11,6 @@ comments: true
 toc: true
 toc_sticky: true
 header:
-  image: https://compliance4all14.files.wordpress.com/2018/06/iot-cover-image.gif
+  image: https://miro.medium.com/max/2600/1*RTGHo8x278rzhj2cZSjwtA.gif
   teaser: https://images.unsplash.com/photo-1592438710388-bf464c011df9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
-
 ---
