@@ -24,6 +24,7 @@ header:
     - [AI Hub](https://aihub.cloud.google.com/)
     - [Kaggle](https://www.kaggle.com/)
     - [Awesome-Pytorch-List](https://github.com/bharathgs/Awesome-pytorch-list)
+    - [Awesome-Python-Data-Science](https://github.com/krzjoa/awesome-python-data-science#machine-learning)
 
 + NLP
     - [The Big Bad NLP Database Notebooks](https://notebooks.quantumstat.com/)
@@ -43,6 +44,11 @@ header:
         - [AI Shack](https://aishack.in/)
 
 ## Database
+<figure>
+	<a href="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1021&q=80"><img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1021&q=80"></a>
+	<figcaption>Database & Base-Data
+</figcaption>
+</figure>
 + NLP
     - [The Big Bad NLP Database](https://datasets.quantumstat.com/)
 + CV
@@ -61,6 +67,11 @@ header:
         * [MS COCO](https://cocodataset.org/#home)
 
 ## Pre-trained CV Models
+<figure>
+	<a href="https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15293/nlp-tutorial-text-classification-60b609c0b7a2622d2b0d6122f2b27f97.png"><img src="https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15293/nlp-tutorial-text-classification-60b609c0b7a2622d2b0d6122f2b27f97.png"></a>
+	<figcaption>Model Abstractions
+</figcaption>
+</figure>
 ### Tensorflow <a name="tensorflow"/>
 
 | Model Name | Description | Framework |
@@ -154,5 +165,8 @@ header:
 | [torchxrayvision](https://github.com/mlmed/torchxrayvision) | Pretrained models for chest X-ray (CXR) pathology predictions. Medical, Healthcare, Radiology  | `PyTorch` | 
 
 ## Useful API
+<figure>
+	<a href="https://cdn-media-1.freecodecamp.org/images/1*F8R-PEI9iVJ-sY3qFZemCg.png"><img src="https://cdn-media-1.freecodecamp.org/images/1*F8R-PEI9iVJ-sY3qFZemCg.png"></a>
+</figure>
 + General
     - [API Coding](https://apicoding.io/)
