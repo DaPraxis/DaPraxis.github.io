@@ -16,6 +16,17 @@ Direct-entry Ph.D. student in the University of Toronto under the supervision of
 Exploring *Machine Learning* with Software Engineering solution.
 
 ## Experiences
++ ### Support Researcher
+    @Huawei
+
+    *08/2020-present*
+
+    > - Research and develop state-of-the-art technology in human-computer interaction and machine learning, supervised by [Sachi Mizobuchi](https://trihomeandcommunity.com/our-team/sachi-mizobuchi/)
+
+    > - Work with common machine learning, computer vision, and deep learning libraries
+
+    > - Take into consideration of the mobile computing constraints for the optimization of algorithms and machine learning models
+*
 + ### Data Science Team Lead
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 
