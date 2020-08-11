@@ -32,6 +32,16 @@ gallery1:
   - url: ../assets/imgs/posts/Social/yolo.gif
     image_path: ../assets/imgs/posts/Social/yolo.gif
     alt: "YOLO benchmark"
+gallery2:
+  - url: https://images.unsplash.com/photo-1488034976201-ffbaa99cbf5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
+    image_path: https://images.unsplash.com/photo-1488034976201-ffbaa99cbf5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
+    alt: "Toronto"
+  - url: https://i.imgur.com/g7IVrbJ.jpg
+    image_path: https://i.imgur.com/g7IVrbJ.jpg
+    alt: "YOLOv5 Toronto"
+  - url: https://i.imgur.com/g7IVrbJ.jpg
+    image_path: https://i.imgur.com/g7IVrbJ.jpg
+    alt: "Detectron2 Toronto"  
 ---
 # DEMO
 {% include gallery caption="Distance Measuring with Euclidean(left) & Bird-eye view(right)" %}
@@ -102,12 +112,13 @@ YOLOv5 is the latest model(up to 8/11/2020) of YOLO family, and is inarguably th
   * [`<object-class>`](https://github.com/ultralytics/yolov5/blob/master/data/coco.yaml) represents object category with: 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', ... where 0 stands for 'person', 1 stands for 'bicycle' and so on
   * `<x><y><width><height>` are float point proportional to image actual height and width, i.e. `<height> = <abs_height>/<image_height>`. Ranges from 0.0-1.0, where `<x><y>` is the center of the image.
 
-  > 2 0.0699219 0.672917 0.139844 0.265278 
-    2 0.264062 0.581944 0.11875 0.0888889 
-    0 0.739453 0.565278 0.0289063 0.127778 
-    0 0.531641 0.603472 0.0460938 0.140278 
-    2 0.570312 0.573611 0.167187 0.122222 
-    74 0.385547 0.298611 0.0179687 0.0333333 
+{% include gallery id='gallery2' caption="Object Detection on image Toronto.jpg(original, YOLOv5, Detectron2)" %}
+
+  $$\begin{array}{|l|l|l|l|l|}
+\hline \text { Class} & \text { x } & \text { y } & \text { width } & \text { height } \\
+\hline 2 & 0.0699219 & 0.672917 & 0.139844 & 0.265278  \\
+\hline
+\end{array}$$
 
 ### Pipeline Setup
 
