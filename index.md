@@ -77,7 +77,12 @@ Exploring *Machine Learning* with Software Engineering solution.
     > - University of Toronto, double major in Computer Science and Statistics 
 
 ## Publications
-* Lu Wang, Mark Chignell, Haoyan Jiang and Nipon Charoenkitkarn.“Cluster- Boosted Multi-Task Survival Analysis”. Submitted to The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
+* ### Cluster- Boosted Multi-Task Survival Analysis
+
+    *2020.08*
+    
+    > - Lu Wang, Mark Chignell, Haoyan Jiang and Nipon Charoenkitkarn.
+    > - Accepted by The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
 
 ## Awards
 *  ### Dean's List Scholar 
