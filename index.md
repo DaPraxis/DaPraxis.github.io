@@ -9,11 +9,9 @@ header:
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 ---
 ## About Me
-I am **Haoyan (Max) Jiang**, a fourth year Honored B.Sc<span> double major in Computer Science & Statistics in the University of Toronto.
+I am **Haoyan (Max) Jiang**, a direct-entry Ph.D. student at the University of Toronto under the supervision of [Professor Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/).
 
-Direct-entry Ph.D. student in the University of Toronto under the supervision of [Professor Mark Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/).
-
-Exploring *Machine Learning* with Software Engineering solution.
+Exploring *Machine Learning* with Software Engineering solutions.
 
 ## Experiences
 + ### Support Researcher
@@ -25,16 +23,16 @@ Exploring *Machine Learning* with Software Engineering solution.
 
     > - Work with common machine learning, computer vision, and deep learning libraries
 
-    > - Take into consideration of the mobile computing constraints for the optimization of algorithms and machine learning models
+    > - Take into consideration the mobile computing constraints for the optimization of algorithms and machine learning models
 *
 + ### Data Science Team Lead
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 
     *05/2020 - present*
 
-    > -  Co-leading data science team to perform Hamilton Depression Rating Scale (HDRS) data exploration on medical effects upon anti-depression medications.
+    > -  Co-leading data science team to perform the Hamilton Depression Rating Scale (HDRS) data exploration on medical effects upon anti-depression medications.
 
-    > - Framingham data from NIH, risk factor analysis for dementia and heart failure; Manage a team of five developing data mining tool for medical data cleaning, preprocessing and visualization on Flask and Dash.
+    > - Framingham data from NIH, risk factor analysis for dementia and heart failure; Manage a team of five developing data mining tools for medical data cleaning, preprocessing, and visualization on Flask and Dash.
 
     > - fMRI image prediction brain dementia
 
@@ -66,7 +64,7 @@ Exploring *Machine Learning* with Software Engineering solution.
 
     *2020.09 - 2025.05*
 
-    > - University of Toronto, Mechanical & Industrial Engineering department
+    > - The University of Toronto, Mechanical & Industrial Engineering department
     > - supervised by [Prof.Chignell](https://www.mie.utoronto.ca/faculty_staff/chignell/) 
 
 *  ### Honored B.Sc with high distinction
@@ -74,14 +72,14 @@ Exploring *Machine Learning* with Software Engineering solution.
     *2016.09 - 2020.10*
 
     > - cGPA: 3.74/4.0
-    > - University of Toronto, double major in Computer Science and Statistics 
+    > - The University of Toronto, double major in Computer Science and Statistics 
 
 ## Publications
 * ### Cluster- Boosted Multi-Task Survival Analysis
 
     *2020.08*
     
-    > - Lu Wang, Mark Chignell, Haoyan Jiang and Nipon Charoenkitkarn.
+    > - Lu Wang, Mark Chignell, Haoyan Jiang, and Nipon Charoenkitkarn.
     > - Accepted by The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
 
 ## Awards
@@ -96,10 +94,10 @@ Exploring *Machine Learning* with Software Engineering solution.
     *2018.01*
 
     > - honor issuer: University of Toronto Applied Science and Engineering
-    > - Top student with high academic achievement in Engineering department
+    > - Top student with high academic achievement in the Engineering department
 *  ### Dean's List 
 
     *2017.01*
 
     > - honor issuer: University of Toronto Applied Science and Engineering
-    > - Top student with high academic achievement in Engineering department
+    > - Top student with high academic achievement in the Engineering department

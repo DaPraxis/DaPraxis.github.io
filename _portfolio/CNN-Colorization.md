@@ -87,9 +87,9 @@ gallery3:
 # Introduction
 This project works with Convolutional Neural Networks and exploring its applications. We will mainly focus on two famous tasks:
 
-* Image Colorization: given a grey scale image, we need to predict its color in each pixel
+* Image Colorization: given a greyscale image, we need to predict its color in each pixel
     - difficulties: ill-posed problem -- multiple equally valid colorings
-    - dataset: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) constains 60000 32x32 colour images in 10 classes, with 6000 images per class, where 50000 are training images, and 10000 are test images. The 10 classes are: horse, automobile, bird, cat, deer, dog, frog, horse, ship and truck. Our main focus in the horse class
+    - dataset: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) contains 60000 32x32 color images in 10 classes, with 6000 images per class, where 50000 are training images, and 10000 are test images. The 10 classes are horse, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. Our main focus in the horse class
 
     <figure>
 	<a href="https://miro.medium.com/max/875/1*SZnidBt7CQ4Xqcag6rd8Ew.png">
@@ -112,11 +112,11 @@ This project works with Convolutional Neural Networks and exploring its applicat
     {% include gallery id="gallery2" caption="17 Flowers Training Results" %}
 
 # Task 1: Colorization Classification
-We will select a subset of 24 colours and frame colorization as a pixel-wise classification problem, where we label each pixel with one of 24 colours. The 24 colours are selected using k-means clustering over colours, and selecting cluster centers
+We will select a subset of 24 colors and frame colorization as a pixel-wise classification problem, where we label each pixel with one of 24 colors. The 24 colors are selected using k-means clustering over colours, and selecting cluster centers
 
 The cluster centers are provided in [link](http://www.cs.toronto.edu/~jba/kmeans_colour_a2.tar.gz), which was downloaded by the helper functions above. For simplicity, we will measure distance in RGB space. This is not ideal and can be improved later.
 
-PS: You can jump to [Model section](#model-) first to get the idea in machine learning, since I have already got python dirty work covered for you 😛 
+PS: You can jump to [Model section](#model-) first to get the idea in machine learning since I have already got python dirty work covered for you 😛 
 
 ## Data Handeling
 ### Helper Functions
