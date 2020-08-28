@@ -36,13 +36,15 @@ gallery2:
   - url: https://images.unsplash.com/photo-1488034976201-ffbaa99cbf5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
     image_path: https://images.unsplash.com/photo-1488034976201-ffbaa99cbf5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80
     alt: "Toronto"
-  - url: https://i.imgur.com/g7IVrbJ.jpg
-    image_path: https://i.imgur.com/g7IVrbJ.jpg
+  - url: https://imgur.com/ToIf1na
+    image_path: https://i.imgur.com/ToIf1na.jpg
     alt: "YOLOv5 Toronto"
   - url: https://i.imgur.com/g7IVrbJ.jpg
     image_path: https://i.imgur.com/g7IVrbJ.jpg
     alt: "Detectron2 Toronto"  
 ---
+<object data="../../assets/imgs/posts/Social/Report.pdf" width="1000" height="1000" type='application/pdf'></object>
+
 # DEMO
 {% include gallery caption="Distance Measuring with Euclidean(left) & Bird-eye view(right)" %}
 
@@ -96,11 +98,7 @@ YOLOv5 is the latest model(up to 8/11/2020) of YOLO family, and is inarguably th
     </figure>
 
 * Head: Detection on features, generating bounding boxes and predict categories. 
-  <figure>
-	<a href="https://i.imgur.com/eBUZxEc.jpg">
-    <img src="https://i.imgur.com/eBUZxEc.jpg"></a>
-	<figcaption>YOLOv5 Architecture Summary </figcaption>
-    </figure>
+  ![image-center]({{ site.url }}{{ site.baseurl }}../assets/imgs/posts/Social/YOLO architecture.jpg){: .align-center}
 
 ## Inferencing & Predicting
 ### Data Labeling
@@ -193,6 +191,29 @@ Table 2: Object Detection Inference Accuracy per 300 frames
 
 
 {% include gallery id='gallery1' caption="YOLOv5 Benchmark on EPFL 6p-c1" %}
+
+# Bird Eye View Conversion
+This part it very tricky, even a *trade secret* for some small companies. The Bird-Eye-View problem is mainly a problem of perspectives, where though distance between people is finite, it changes with the distance between objects and lens, i.e. the extrinsic matrix. 
+
+<figure>
+	<a href="https://i.stack.imgur.com/xGeeC.png">
+    <img src="https://i.stack.imgur.com/xGeeC.png"></a>
+	<figcaption>3D to 2D mapping in camera</figcaption>
+    </figure>
+
+In real life, the real-world distance would be much easier to estimate with extrinsic matrix, intrinsic matrix, or multiple cameras if you have a full control of the dataset, and even perform a 3D stereo reconstruction. 
+
+<figure>
+	<a href="https://www.researchgate.net/profile/Mohamad_Hanif_Md_Saad/publication/318452089/figure/fig6/AS:669681593614369@1536675942999/3D-reconstruction-from-stereo-camera-images.jpg">
+    <img src="https://www.researchgate.net/profile/Mohamad_Hanif_Md_Saad/publication/318452089/figure/fig6/AS:669681593614369@1536675942999/3D-reconstruction-from-stereo-camera-images.jpg"></a>
+	<figcaption>3D Stereo Reconstruction from Images</figcaption>
+    </figure>
+
+However, in our case, we have no way to find the real world distance with above matrices. Therefore, we used a four-point mapping technique, selecting a region in picture that is rectangular in real world(usually the road) and performs a 2D wrapping to actually make it rectangle. All the distance will be calculated based on the wrapped coordinates. 
+
+We know that this method is limited, error-prone and needs human labeling for different videos, but the result is ideal. 
+
+Take a look at the [github code](https://github.com/EvanSamaa/EyeDK/blob/master/eyedk_utils.py#L634-L832) 
 
 # Contact Me
 If you are interested in my projects or have any new ideas you wanna talk about, feel free to [contact](mailto:haoyanhy.jiang@mail.utoronto.ca) me!
