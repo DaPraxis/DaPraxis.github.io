@@ -13,6 +13,7 @@ comments: true
 # mathjax: true
 toc: true
 toc_sticky: true
+author_profile: true
 header:
     image: https://images.unsplash.com/photo-1493804714600-6edb1cd93080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
     teaser: https://i.pinimg.com/originals/61/f6/1b/61f61b3d18a7c87a4bd304f797ed9548.gif

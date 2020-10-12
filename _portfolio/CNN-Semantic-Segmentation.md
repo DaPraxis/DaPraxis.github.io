@@ -8,6 +8,7 @@ categories:
   - Python
   - Data Visualization
 last_modified_at: 2020-07-19T08:06:00-07:00
+author_profile: true
 comments: true
 mathjax: true
 toc: true

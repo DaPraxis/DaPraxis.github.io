@@ -9,6 +9,7 @@ categories:
 last_modified_at: 2020-07-19 10:00
 comments: true
 toc: true
+author_profile: true
 toc_sticky: true
 mathjax: true
 header:

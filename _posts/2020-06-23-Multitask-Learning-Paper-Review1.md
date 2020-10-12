@@ -8,6 +8,7 @@ categories:
   - Neural Net
 last_modified_at: 2020-06-23 16:00
 comments: true
+author_profile: true
 toc: true
 toc_sticky: true
 mathjax: true

@@ -14,17 +14,17 @@ I am **Haoyan (Max) Jiang**, a direct-entry Ph.D. student at the University of T
 Exploring *Machine Learning* with Software Engineering solutions.
 
 ## Experiences
-+ ### Support Researcher
++ ### Support Researcher (ML & HCI)
     @Huawei
 
     *08/2020-present*
 
     > - Research and develop state-of-the-art technology in human-computer interaction and machine learning, supervised by [Sachi Mizobuchi](https://trihomeandcommunity.com/our-team/sachi-mizobuchi/)
 
-    > - Work with common machine learning, computer vision, and deep learning libraries
+    > - Work on Gesture Detection on Android devices and in-car gesture controls, simulate driving experience with Codot and Unity
 
     > - Take into consideration the mobile computing constraints for the optimization of algorithms and machine learning models
-*
+
 + ### Data Science Team Lead
     [@University of Toronto Interactive Media Lab](https://imedia.mie.utoronto.ca/)
 

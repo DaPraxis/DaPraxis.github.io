@@ -11,6 +11,7 @@ last_modified_at: 2020-06-21 16:00
 comments: true
 toc: true
 toc_sticky: true
+author_profile: true
 header:
   image: https://miro.medium.com/max/1400/1*wibtMkDPQLqkCGEQ2ekheQ.jpeg
   teaser: https://miro.medium.com/max/1400/1*wibtMkDPQLqkCGEQ2ekheQ.jpeg

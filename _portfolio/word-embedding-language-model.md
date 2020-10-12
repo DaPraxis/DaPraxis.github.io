@@ -10,16 +10,17 @@ categories:
 last_modified_at: 2020-06-21T08:06:00-07:00
 comments: true
 mathjax: true
+author_profile: true
 toc: true
 toc_sticky: true
 header:
     image: https://images.unsplash.com/photo-1575385151519-05e02c4f734f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80
     teaser: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
-sidebar:
-  - title: "t-SNE visualization"
-    image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
-    image_alt: "t-SNE visualization"
-    text: "Feature Vector Alignment"
+# sidebar:
+#   - title: "t-SNE visualization"
+#     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
+#     image_alt: "t-SNE visualization"
+#     text: "Feature Vector Alignment"
 gallery:
   - url: ../assets/imgs/posts/language_model_files/language_model_38_3.png
     image_path: ../assets/imgs/posts/language_model_files/language_model_38_3.png

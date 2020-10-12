@@ -11,6 +11,7 @@ categories:
 last_modified_at: 2020-08-07T08:06:00-07:00
 comments: true
 mathjax: true
+author_profile: true
 toc: true
 toc_sticky: true
 header:
