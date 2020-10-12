@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Max Jiang"
-  avatar           : "/assets/imgs/avatar.jpg"
+  avatar           : "/assets/imgs/avatar_author.jpg"
   bio              : "Ph.D. Student at the University of Toronto."
   location         : "Toronto ON, CA"
   email            : "haoyanhy.jiang@mail.utoronto.ca"
