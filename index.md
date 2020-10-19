@@ -75,12 +75,19 @@ Exploring *Machine Learning* with Software Engineering solutions.
     > - The University of Toronto, double major in Computer Science and Statistics 
 
 ## Publications
+* ### MD-MTL: An Ensemble Med-Multi-Task Learning Package for Disease Scores Prediction and Multi-Level Risk Factor Analysis
+
+    *2020.09*
+
+    >- Lu Wang, Haoyan Jiang, Mark Chignell
+    >- Submitted to the AMIA 2021 Virtual Informatics Summit
+
 * ### Cluster- Boosted Multi-Task Survival Analysis
 
     *2020.08*
     
     > - Lu Wang, Mark Chignell, Haoyan Jiang, and Nipon Charoenkitkarn.
-    > - Accepted by The 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
+    > - Accepted by the 20th IEEE International Conference on Bioinformatics and Bioengineering (BIBE 2020).
 
 ## Awards
 *  ### Dean's List Scholar 

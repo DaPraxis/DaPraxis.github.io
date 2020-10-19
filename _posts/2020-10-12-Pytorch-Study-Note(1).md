@@ -17,7 +17,9 @@ header:
 ---
 # Prelude
 
-*Pytorch* is one of the most basic framework machine learning engineers and researchers use these days to model and train and tune. I personally have used Pytorch for almost two years and stumbled upon all the pros and cons in PyTorch code as every researcher does. I think most people learn PyTorch like me, get insights from other people's work, and adapts to it just by rumbling through the PyTorch documentation. There hasn't really been a chance for me to slow down and  **LEARN** PyTorch. As I know for all the Machine Learning courses I have taken in the University of Toronto those 4-5 years, there is also no courses focusing on using PyTorch or TensorFlow, they are mostly on the theory, and give you the code and ask you to fill the blank 😪. Now, with the time to spend in this pandemic time, I want to take a deeper look at PyTorch, especially how to coordinate between syntaxes and APIs. All the API and knowledge listed below are updated until 2020 PyTorch 1.6.0
+*Pytorch* is one of the most basic framework machine learning engineers and researchers use these days to model and train and tune. I personally have used Pytorch for almost two years and stumbled upon all the pros and cons in PyTorch code as every researcher does. I think most people learn PyTorch like me, get insights from other people's work, and adapts to it just by rumbling through the PyTorch documentation. There hasn't really been a chance for me to slow down and  **LEARN** PyTorch. As I know for all the Machine Learning courses I have taken in the University of Toronto those 4-5 years, there is also no courses focusing on using PyTorch or TensorFlow, they are mostly on the theory, and give you the code and ask you to fill in the blank 😪. 
+
+Now, with the time to spend in this pandemic time, I want to take a deeper look at PyTorch, especially how to coordinate between syntaxes and APIs. All the API and knowledge listed below are updated until 2020 PyTorch 1.6.0
 
 # Table of Content
 * Tensor and its initializations
@@ -67,7 +69,7 @@ Let's take a look at Tensor as well:
 Pretty similar huh?
 
 ## 3. Create a Tensor
-### 1. Create directly from data
+### 3.a. Create directly from data
 ```ruby
 torch.Tensor(data, 
             dtype=None,
@@ -79,7 +81,7 @@ The variable `data` here can be any common python data types: list or numpy. `dt
 
 > **NOTE**: when you create tensor from numpy array, the two data structure will alias in memory, i.e. change of content in numpy array will result changes in tensor and wise-versa
 
-### 2. Create with filled numbers
+### 3.b. Create with filled numbers
 + We can create a tensor of only 0s inside
     ```ruby
     torch.zeros(*size,
@@ -140,6 +142,59 @@ The variable `data` here can be any common python data types: list or numpy. `dt
     ```
     `n` and `m` are the number of rows and columns for matrix respectively
 
-### 3. Create with probabilities or distributions
+### 3.c. Create with probabilities or distributions
++ create normal distribution (Gaussian Functions)
+    This is very commonly used in pytorch.
+    ```ruby
+    torch.normal(mean,
+                std,
+                generator=None,
+                out=None)
+    ```
+    `mean` is the average; `std` is the standard distribution; `generator` is of type `torch.Generator` a pseudorandom number generator for sampling; and `out` is as usual, the output tensor
+
+    **Note** that `mean` and `std` both can be a scalar or a tensor, which bring us four combinations of inputs:
+
+    - Case 1:
+        In this case, we have both `mean` and `std` scalars, the output will be a tensor of size 4, but coming from the **same** distribution
+    ```ruby
+    t_normal = torch.normal(0, 1, size=(4,))
+    ```
+
+    - Case 2:
+        In this case, we have `mean` as a scalar but `std` a tensor, the output will be still a tensor of size 4, but coming from the **different** distributions all have the same mean value
+    ```ruby
+    std = torch.arange(1, 5, dtype=torch.float)
+    t_normal2 = torch.normal(1, std)
+    ```
+
+    - Case 3:
+        In this case, we have `std` as a scalar but `mean` a tensor, the output will be still a tensor of size 4, but coming from the **different** distributions all have the same standard errors
+    ```ruby
+    mean = torch.arange(1, 5, dtype=torch.float)
+    t_normal3 = torch.normal(mean, 1)
+    ```
+
+    - Case 4:
+        In this case, we have both `mean` and `std` tensors, the output will be a tensor of size 4, but coming from the **different** distribution with **different** mean and standard errors
+    ```ruby
+    mean = torch.arange(1, 5, dtype=torch.float)
+    std = torch.arange(1, 5, dtype=torch.float)
+    t_normal4 = torch.normal(mean, std)
+    ```
+
++ Sample from Normal Distributions
+    `torch.randn()` and `torch.randn_like()` also works with standard normal distribution, returns you an tensor of certain size in that distribution
+
+    `torch.rand()`, `rand_like()` generates random number from normal distribution on interval [0, 1), while `torch.randint()` and `torch.randint_like()` generates on interval [low, high)
+
++ Other Distributions
+    `torch.randperm(n)` generates a random permutation of integers from 0 to 0-1, usually used for indexing
+
+    `torch.bernoulli(input)` generates a bernoulli distribution by probability of `input`
+
+# Basic operations on tensors
+
+
 
 

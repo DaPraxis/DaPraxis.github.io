@@ -6,6 +6,7 @@ categories:
   - Edge Computing
   - Machine Learning
   - IoT
+  - Max's Study Note
 last_modified_at: 2020-07-19 10:00
 comments: true
 toc: true
