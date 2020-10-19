@@ -23,9 +23,8 @@ Now, with the time to spend in this pandemic time, I want to take a deeper look 
 
 # Table of Content
 * Tensor and its initializations
-* Basic operations on tensors (tensor joins, splits, indexing, transformation, and mathematical operations)
+* Operations on tensors (tensor joins, splits, indexing, transformation, and mathematical operations)
 * Linear Regression for demo
-* Summary
 
 # Tensor and its initializations
 ## 1. Tensor
@@ -193,8 +192,285 @@ The variable `data` here can be any common python data types: list or numpy. `dt
 
     `torch.bernoulli(input)` generates a bernoulli distribution by probability of `input`
 
-# Basic operations on tensors
+# Operations on tensors
+The operations on tensor is very similar to all the operations on numpy matrix or numpy array, with a few details to notice
 
+## 1. Basic Operations
 
+### 1.a. Connecting Tensors
+We can connect two tensors by `cat` or `stack`, which basically linking two tensors on one dimension. The difference sis that `cat` stands for *concatenate*, it joining two tensors on one existing dimension, while `stack` will create a new dimension and output a tensor that linking the two tensor on this new dimension.
 
++ `torch.stack(tensors, dim=0, out=None)`
+    ```ruby
+    t = torch.ones((2, 3))
+    # t = tensor([[1., 1., 1.],
+    #             [1., 1., 1.]])
+    t_stack = torch.stack([t,t,t], dim=0) # stacking on dimension 0 
+    # -> shape = ([3,2,3])
 
+    # t_stack = tensor([[[1., 1., 1.],
+    #                    [1., 1., 1.]],
+
+    #                   [[1., 1., 1.],
+    #                    [1., 1., 1.]],
+
+    #                   [[1., 1., 1.],
+    #                    [1., 1., 1.]]])
+    t_stack1 = torch.stack([t, t, t], dim=1) # stacking on dimension 1 
+    # -> shape = ([2,3,3])
+
+    # t_stack1 = tensor([[[1., 1., 1.],
+    #                     [1., 1., 1.],
+    #                     [1., 1., 1.]],
+
+    #                    [[1., 1., 1.],
+    #                     [1., 1., 1.],
+    #                     [1., 1., 1.]]])
+    ```
+
++ `torch.cat(tensors, dim=0, out=None)`
+
+    ```ruby
+    t = torch.ones((2, 3))
+    # t = tensor([[1., 1., 1.],
+    #             [1., 1., 1.]])
+    t_0 = torch.cat([t, t], dim=0) # concatenate by row
+    # t_0 = tensor([[1., 1., 1.],
+    #               [1., 1., 1.],
+    #               [1., 1., 1.],
+    #               [1., 1., 1.]])
+    t_1 = torch.cat([t, t], dim=1) # concatenate by column
+    # t_1 = tensor([[1., 1., 1., 1., 1., 1.],
+    #               [1., 1., 1., 1., 1., 1.]])
+    ```
+
+### 1.b. Separating Tensor
+We use `chunk` and `split` to separate a tensor into many parts. `chunk` separates a tensor into many equal-size tensors, while `split` is a more powerful version of `chunk`, which separates a tensor in to many customized size chunks
+
++ `torch.chunk(input, chunks, dim=0)`
+    ```ruby
+    t = torch.Tensor([[1,2,3,4,5,6,7],[8,9,10,11,12,13,14]])
+    # We cut the tensor t of size (2,7) in to three pieces by column, 
+    # this will give us (2,3), (2,3) and (2,1)
+    list_of_tensors = torch.chunk(t, dim=1, chunks=3)
+    # list_of_tensors = (tensor([[1,2,3],
+    #                            [8,9,10]]),
+    #                    tensor([[4,5,6],
+    #                            [11,12,13]]),
+    #                    tensor([[7],
+    #                            [14]])
+    #                   )
+    ```
++ `torch.split(tensor, split_size_or_sections, dim=0)`
+    ```ruby
+    t = torch.Tensor([[1,2,3,4,5,6,7],[8,9,10,11,12,13,14]])
+    # We cut the tensor t of size (2,7) in to three pieces by column, 
+    # this will give us (2,3), (2,2) and (2,2) follows the customized cut
+    list_of_tensors = torch.split(t, [3, 2, 2], dim=1)
+    # list_of_tensors = (tensor([[1,2,3],
+    #                            [8,9,10]]),
+    #                    tensor([[4,5],
+    #                            [11,12]]),
+    #                    tensor([[6,7],
+    #                            [13,14]])
+    #                   )
+    ```
+
+### 1.c. Indexing Tensor
++ `torch.index_select(input, dim, index, out=None)`
+    ```ruby
+    t = torch.randint(0, 9, size=(3, 3)) #  generate a random 3x3 matrix from 0-8
+    # t = tensor([[2, 7, 2],
+    #             [4, 3, 8],
+    #             [1, 6, 0]])
+    idx = torch.tensor([0, 2], dtype=torch.long)  # index 0-1, notice that the type must be long
+    t_select = torch.index_select(t, dim=1, index=idx)  # indexing the 0th column and 1st column
+    # t_select = tensor([[2, 7],
+    #                    [4, 3],
+    #                    [1, 6]])
+    ```
+
++ `torch.masked_select(input, mask, out=None)`
+    `mask` here is a boolean matrix of the same shape as `input` matrix. A one-dimensional tensor will be returned based on the `True` index in the `mask`
+    ```ruby
+    # To select all the values in t that has value >=5
+    # t = tensor([[2, 7, 2],
+    #             [4, 3, 8],
+    #             [1, 6, 0]])
+    mask = t.ge(5) # le(5)-> '<=5', gt(5)-> '>5', lt(5)-> '<5'
+    # mask：
+    # tensor([[False,  True, False],
+    #         [False, False,  True],
+    #         [ True,  True, False]]) 
+    t_select1 = torch.masked_select(t, mask)
+    # t_select1 = tensor([7, 7, 5, 8])
+    ```
+
+### 1.d. Transforming Tensor
++ `torch.reshape(input, shape)`
+    This function changes the shape of `input` tensor, very commonly used in tensor manipulations. Notice that the matrix after `reshape` and before will share the same address 
+    ```ruby
+    t = torch.randperm(8)
+    # t = tensor([2,5,1,2,4,3,6,7])
+    # the -1 is the first dimension back calculated from 8/2/2 automatically by pytorch
+    t_reshape = torch.reshape(t, (-1, 2, 2))
+    # t_shape = tensor([[[2, 5],
+    #                    [1, 2]],
+
+    #                   [[4, 3],
+    #                    [6, 7]]]) 
+    ```
+
++ `torch.transpose(input, dim0, dim1)`
+    Swap the two dimensions `dim0` and `dim1`
+    ```ruby
+    t = torch.Tensor([[[1,2,3],[4,5,6]],[[7,8,9],[3,2,1]]])
+    # t = tensor([[[1,2,3],
+    #              [4,5,6]],
+
+    #             [[7,8,9],
+    #              [3,2,1]]])
+    t_transpose = torch.transpose(t, dim0=0, dim1=2)
+    # t_transpose = tensor([[[1., 7.],
+    #                        [4., 3.]],
+
+    #                       [[2., 8.],
+    #                        [5., 2.]],
+
+    #                       [[3., 9.],
+    #                        [6., 1.]]])
+    ```
+
+    **Note**: For 2 dimensional data tensors, we can use `torch.t(input)` to transpose the input automatically without predefining the dimensions.
+
++ `torch.squeeze(input, dim=None, out=None)`
+    Compress all dimensions that has length of 1
+    ```ruby
+    t = torch.rand((1, 2, 3, 1))
+    # t.shape = torch.Size([1, 2, 3, 1])
+    t_sq = torch.squeeze(t)
+    # t_sq.shape = torch.Size([2, 3])
+    t_0 = torch.squeeze(t, dim=0)
+    # t_0.shape = torch.Size([2, 3, 1])
+    t_1 = torch.squeeze(t, dim=1)
+    # t_1.shape = torch.Size([1, 2, 3, 1])
+    ```
+
+    while `torch.unsqueeze(input, dim, out=None)` is doing the opposite to expand dimension on `dim`
+
+## 2. Mathematical Operations
+Pytorch supports all kinds of mathematical operations you can think of, including +, -, $$\times$$, $$\div$$, $$a^x$$, $$x^a$$, log, and sin/cos
+
+```ruby
+torch.add()
+torch.addcdiv()
+torch.addcmul()
+torch.sub()
+torch.div()
+torch.mul()
+
+torch.log(input, out=None)
+torch.log10(input, out=None)
+torch.log2(input, out=None)
+torch.exp(input, out=None)
+torch.pow()
+
+torch.abs(input, out=None)
+torch.acos(input, out=None)
+torch.cos(input, out=None)
+torch.cosh(input, out=None)
+torch.asin(input, out=None)
+torch.atan(input, out=None)
+torch.atan2(input, out=None)
+```
+
+We will talk a bit more about `torch.add(input, other, *, alpha=1, out=None)`. The `alpha` here is an extra multiplier works on `other`, with formula $$out = input + alpha \times other$$, where we can simply use `torch.add(b, x, alpha=w)` to express y=wx+b on linear regression. This is very handy
+
+There are two other similar functions:
+
++ `torch.addcdiv(input, value=1, tensor1, tensor2, out=None)`
+    $$out_i = input_i + value \times \frac{tensor1_i}{tensor2_i}$$
+
++ `torch.addcmul(input, value=1, tensor1, tensor2, out=None)`
+    $$out_i = input_i + value \times tensor1_i \times tensor2_i$$
+
+Which just perfectly bring us the next topic: **Linear Regression**
+
+# Linear Regression
+
+I will not elaborate how linear regression works, you can check out [this link](http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm) for details, but more on how we implement it in Pytorch
+
+Model: $$y = wx + b$$
+
+Loss: $$MSE = \frac{1}{m}\sum^m_{i=1}(y_i-\tilde{y_i})$$
+
+Gradient Descent for w, b updates:
+
+$$w = w - lr \times w.grad$$
+
+$$b = b - lr \times b.grad$$
+
+```ruby
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+
+# First we randomly generate x, y samples from normal distributions
+x = torch.rand(20, 1) * 10 # x ranges from 0 to 10
+y = 2 * x + (5 + torch.randn(20, 1))
+
+# set hyperparameters
+lr = 0.05 # learning rate
+
+# Construct parameters for gradient descent
+w = torch.randn((1), requires_grad=True)
+b = torch.zeros((1), requires_grad=True)   # Both need to take gradients
+
+# train in 100 iterations
+for iteration in range(100):
+    # Forward propagation
+    wx = torch.mul(w, x)
+    y_pred = torch.add(wx, b)
+
+    # Calculate loss
+    loss = (0.5 * (y-y_pred)**2).mean()
+
+    # Back propagation
+    loss.backward()
+
+    # Updates gradient
+    b.data.sub_(lr * b.grad) # this is equivalent to -=
+    w.data.sub_(lr * w.grad)
+
+    # Wipe gradient
+    w.grad.data.zero_()
+    b.grad.data.zero_()
+
+print(w.data, b.data)
+# tensor([2.3225])
+# tensor([3.5149])
+
+# plot linear regression
+x_new = np.linspace(0, 10, 100)
+y_new = x_new*w.data.tolist()[0]+b.data.tolist()[0]
+
+plt.figure(figsize=(4, 3))
+ax = plt.axes()
+ax.scatter(x, y)
+ax.plot(x_new, y_new)
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.axis('tight')
+plt.show()
+```
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/imgs/posts/study_note/linear_regression.png){: .align-center}
+<figcaption>Linear Regression Result</figcaption>
+
+# Summary
+
+This is a small start of ours. It may look tedious to start with, but it becomes crucial when you dive into the ML works later. As it always says: 
+
+> *"The difference between something good and something great is attention to detail."*
+
+Now we have the solid building blocks as our disposal, lets move to the next section: **Pytorch Study Note 2** where will talk about PyTorch dynamic computation graph, auto gradient and logistic regression implementations
