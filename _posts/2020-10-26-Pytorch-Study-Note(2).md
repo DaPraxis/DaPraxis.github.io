@@ -14,11 +14,12 @@ toc_sticky: true
 mathjax: true
 header:
   teaser: https://analyticsindiamag.com/wp-content/uploads/2019/06/pytorch.png
+  image: https://images.unsplash.com/photo-1476966502122-c26b7830def9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80
 ---
 
 # Prelude
 
-Last article we talked about basic Tensor unit in PyTorch, the manipulation about it and a light tough on the implementation of linear regression in PyTorch architecture. If you missed the last section, you can review [here](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(1)/). This article, we will discuss some very important logics behinds PyTorch that makes it unique and become the favorite of many -- the dynamic computation graph and auto gradient.
+Last article we talked about basic Tensor unit in PyTorch, the manipulation about it and a light tough on the implementation of linear regression in PyTorch architecture. If you missed the last section, you can review [here](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(1)/). As the teaser image suggests, **IT IS MATH TIME!** Nothing really hard and theoretical, but some basic differentiation techniques will suffice. In this article, we will discuss some very important logics behinds PyTorch that makes it unique and become the favorite of many -- the dynamic computation graph and auto gradient. Also, a demo of how to setup logistic regression in PyTorch in practice.
 
 # Table of Content
 - Computation Graph

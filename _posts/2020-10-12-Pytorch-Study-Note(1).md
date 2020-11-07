@@ -14,12 +14,15 @@ toc_sticky: true
 mathjax: true
 header:
   teaser: https://analyticsindiamag.com/wp-content/uploads/2019/06/pytorch.png
+  image: https://images.fineartamerica.com/images-medium-large-5/11-white-matter-fibres-of-the-human-brain-alfred-pasieka.jpg
 ---
 # Prelude
 
 *Pytorch* is one of the most basic framework machine learning engineers and researchers use these days to model and train and tune. I personally have used Pytorch for almost two years and stumbled upon all the pros and cons in PyTorch code as every researcher does. I think most people learn PyTorch like me, get insights from other people's work, and adapts to it just by rumbling through the PyTorch documentation. There hasn't really been a chance for me to slow down and  **LEARN** PyTorch. As I know for all the Machine Learning courses I have taken in the University of Toronto those 4-5 years, there is also no courses focusing on using PyTorch or TensorFlow, they are mostly on the theory, and give you the code and ask you to fill in the blank 😪. 
 
 Now, with the time to spend in this pandemic time, I want to take a deeper look at PyTorch, especially how to coordinate between syntaxes and APIs. All the API and knowledge listed below are updated until 2020 PyTorch 1.6.0
+
+You may have noticed that I am showing a very colorful 'flower' on my teaser image. What does it have to do with PyTorch? Well, that is actually a **Tensor** map of white matter in human brain 🧠 made by Alfred Pasieka. Just imagine how complicated a human brain can be -- a 3D dimension structure with changing of time -- a 4D data, and we hold it with a tensor. I won't teach you how to make that, even if you follows through all my notes, and feel free to entertain yourself, but this bring us the main character to the table: PyTorch: **Tensor**. 
 
 # Table of Content
 * Tensor and its initializations
@@ -51,7 +54,8 @@ Variable is a data type under `torch.autograd`, and been categorized into Tensor
     + required_grad: indicator of if taking derivative is needed
     + is_leaf: indicator if current node is a leaf node
 
-noted that grad_fn is very important, which related to how we are going to derive the parameter in the computation graph. This will be elaborated in [later chapter](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(2)/#properties)
+ `grad_fn` is very important, which related to how we are going to derive the parameter in the computation graph. This will be elaborated in [later chapter](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(2)/#properties)
+ {: .notice--info}
 
 Let's take a look at Tensor as well:
 
@@ -78,7 +82,8 @@ torch.Tensor(data,
 ```
 The variable `data` here can be any common python data types: list or numpy. `dtype` is the data type same to `data` by default. The `pin_memory` when set to True, it loads your samples in the Dataset on CPU and pushes it to the GPU to speed up the host with page-lock memory allocation. For now, we leave it as False as default.
 
-> **NOTE**: when you create tensor from numpy array, the two data structure will alias in memory, i.e. change of content in numpy array will result changes in tensor and wise-versa
+when you create tensor from numpy array, the two data structure will **alias** in memory, i.e. change of content in numpy array will result changes in tensor and wise-versa
+{: .notice--warning}
 
 ### 3.b. Create with filled numbers
 + We can create a tensor of only 0s inside
@@ -152,7 +157,8 @@ The variable `data` here can be any common python data types: list or numpy. `dt
     ```
     `mean` is the average; `std` is the standard distribution; `generator` is of type `torch.Generator` a pseudorandom number generator for sampling; and `out` is as usual, the output tensor
 
-    **Note** that `mean` and `std` both can be a scalar or a tensor, which bring us four combinations of inputs:
+    `mean` and `std` both can be a scalar or a tensor, which bring us four combinations of inputs:
+    {: .notice--success}
 
     - Case 1:
         In this case, we have both `mean` and `std` scalars, the output will be a tensor of size 4, but coming from the **same** distribution
@@ -341,7 +347,8 @@ We use `chunk` and `split` to separate a tensor into many parts. `chunk` separat
     #                        [6., 1.]]])
     ```
 
-    **Note**: For 2 dimensional data tensors, we can use `torch.t(input)` to transpose the input automatically without predefining the dimensions.
+    For 2 dimensional data tensors, we can use `torch.t(input)` to transpose the input automatically without predefining the dimensions.
+    {: .notice--info}
 
 + `torch.squeeze(input, dim=None, out=None)`
     Compress all dimensions that has length of 1
