@@ -1,7 +1,7 @@
 ---
 title:  "Pytorch Study Note 1"
 search: false
-excerpt: 'Tensor Vector and Linear Regression'
+excerpt: 'Tensor Vector, Tensor Manipulations and Linear Regression'
 categories: 
   - Pytorch
   - Max's Study Note
@@ -51,7 +51,7 @@ Variable is a data type under `torch.autograd`, and been categorized into Tensor
     + required_grad: indicator of if taking derivative is needed
     + is_leaf: indicator if current node is a leaf node
 
-noted that grad_fn is very important, which related to how we are going to derive the parameter in the computation graph. This will be elaborated in later chapter
+noted that grad_fn is very important, which related to how we are going to derive the parameter in the computation graph. This will be elaborated in [later chapter](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(2)/#properties)
 
 Let's take a look at Tensor as well:
 
@@ -473,4 +473,4 @@ This is a small start of ours. It may look tedious to start with, but it becomes
 
 > *"The difference between something good and something great is attention to detail."*
 
-Now we have the solid building blocks as our disposal, lets move to the next section: **Pytorch Study Note 2** where will talk about PyTorch dynamic computation graph, auto gradient and logistic regression implementations
+Now we have the solid building blocks as our disposal, lets move to the next section: **[Pytorch Study Note 2](https://dapraxis.github.io/pytorch/max's%20study%20note/machine%20learning/Pytorch-Study-Note(2))** where will talk about PyTorch dynamic computation graph, auto gradient and logistic regression implementations
