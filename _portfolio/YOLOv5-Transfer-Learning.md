@@ -4,6 +4,7 @@ search: false
 excerpt: 'YOLOv5 Transfer Learning'
 categories: 
   - Computer Vision
+  - Transfer Learning
   - CNN
   - Python
   - Data Visualization
