@@ -106,12 +106,7 @@ The soft sharing on the other hand, each task has their own model and parameters
 
   [<i class="fas fa-link"></i>](https://arxiv.org/pdf/1611.01587.pdf) paper source
 
-{% capture fig_img %}
-[![image-center](https://media.arxiv-vanity.com/render-output/3005732/x1.png)](https://media.arxiv-vanity.com/render-output/3005732/x1.png){: .align-center}
-{% endcapture %}
-<figure>
-  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-</figure>
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/imgs/posts/MTL_overview/joint.PNG){: .align-center}
 
 + Weighting Losses with Uncertainty
 >  [Kendall, A., Gal, Y., and Cipolla, R. (2017). Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics.](https://arxiv.org/abs/1705.07115)

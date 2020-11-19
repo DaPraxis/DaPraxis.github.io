@@ -7,7 +7,7 @@ categories:
   - Resource Collection
   - Datasets
   - Max's Study Note
-last_modified_at: 2020-07-19 10:00
+last_modified_at: 2020-11-19 10:00
 comments: true
 toc: true
 author_profile: true
@@ -51,6 +51,8 @@ header:
 	<figcaption>Database & Base-Data
 </figcaption>
 </figure>
++ General
+    - [Big Query](https://cloud.google.com/bigquery/public-data)
 + NLP
     - [The Big Bad NLP Database](https://datasets.quantumstat.com/)
 + CV
