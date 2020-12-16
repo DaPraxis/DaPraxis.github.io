@@ -13,7 +13,7 @@ author_profile: true
 toc_sticky: true
 mathjax: true
 header:
-  teaser: https://analyticsindiamag.com/wp-content/uploads/2019/06/pytorch.png
+  teaser: https://engineering.fb.com/wp-content/uploads/2018/09/PyTorch_Blog-Post_Hero.png
   image: https://images.fineartamerica.com/images-medium-large-5/11-white-matter-fibres-of-the-human-brain-alfred-pasieka.jpg
 ---
 # Prelude

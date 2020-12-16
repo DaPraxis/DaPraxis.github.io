@@ -13,7 +13,7 @@ author_profile: true
 toc_sticky: true
 mathjax: true
 header:
-  teaser: https://analyticsindiamag.com/wp-content/uploads/2019/06/pytorch.png
+  teaser: https://engineering.fb.com/wp-content/uploads/2018/09/PyTorch_Blog-Post_Hero.png
   image: https://images.unsplash.com/photo-1476966502122-c26b7830def9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80
 gallery:
   - url: ../assets/imgs/posts/study_note/logistic1.png
