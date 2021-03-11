@@ -48,7 +48,7 @@ header:
 
 <figure>
 	<a href="https://miro.medium.com/max/1400/1*eVbdrKzrSpJxxkbwqdhQHA.jpeg"><img src="https://miro.medium.com/max/1400/1*eVbdrKzrSpJxxkbwqdhQHA.jpeg"></a>
-	<figcaption>Photo by Author, My partner in Montreal, 2019 Aug</figcaption>
+	<figcaption>Photo by author in Montreal, 2019 Aug</figcaption>
 </figure>
 
 {% capture fig_img %}

@@ -15,7 +15,7 @@ toc: true
 toc_sticky: true
 header:
     image: https://images.unsplash.com/photo-1575385151519-05e02c4f734f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80
-    teaser: https://incyberdefense.com/wp-content/uploads/sites/11/2019/06/thumbnail-1afdb821a5fd681bf07ce45de0842c27.jpeg
+    teaser: https://images.unsplash.com/photo-1545987796-200677ee1011?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
 # sidebar:
 #   - title: "t-SNE visualization"
 #     image: ../assets/imgs/posts/language_model_files/language_model_40_1.png
