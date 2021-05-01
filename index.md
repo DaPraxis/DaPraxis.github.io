@@ -14,10 +14,19 @@ I am **Haoyan (Max) Jiang**, a direct-entry Ph.D. student at the University of T
 Exploring *Machine Learning* with Software Engineering solutions.
 
 ## Experiences
-+ ### Support Researcher (ML & HCI)
-    @Huawei
 
-    *08/2020-present*
++ ### Teaching Assistant STA302H1/STA1001HF – Methods of Data Analysis I
+    @University of Toronto
+
+    *05/2021-08/2021*
+
+    > - Assist teaching, course scheduling and marking with professor Mohammad Khan
+
+    > - Course domain: Introduction to data analysis with a focus on regression. Simple and multiple regression models using least squares. Inference for regression parameters, confidence and prediction intervals.  Least squares estimation and inference for non-linear regression.
++ ### Support Researcher (ML & HCI)
+    @Huawei Noah's Arc Lab HCI
+
+    *08/2020-05/2021*
 
     > - Research and develop state-of-the-art technology in human-computer interaction and machine learning, supervised by [Sachi Mizobuchi](https://trihomeandcommunity.com/our-team/sachi-mizobuchi/)
 
